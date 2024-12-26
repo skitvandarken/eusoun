@@ -1,0 +1,22 @@
+body {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background: linear-gradient(45deg, rgba(0, 24, 61), rgba(0, 97, 187), rgba(0, 42, 81));
+    z-index: -1; /* Push the video behind other content */
+    height: 100vh;
+    min-height: 100vh; /* Ensure the body is at least the height of the viewport */
+    width: 100%;
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    position: relative; /* Ensure positioning context */
+}
+
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+

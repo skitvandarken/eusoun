@@ -1,0 +1,18 @@
+.fundo {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    bottom: 0;
+    width: 100%;
+    background: linear-gradient(45deg, rgba(0, 24, 61), rgba(0, 97, 187), rgba(0, 42, 81));
+    background-blend-mode: multiply;
+    z-index: -1; /* Push the video behind other content */
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.texto{
+    color: white;
+}

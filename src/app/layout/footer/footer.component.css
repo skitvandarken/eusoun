@@ -1,0 +1,12 @@
+.sticky-overlay-footer {
+    position: fixed !important;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000;
+    background: linear-gradient(45deg, rgb(0, 19, 46), rgb(0, 65, 126), rgb(0, 39, 76));
+}
+
+
+.fundo-card{
+    background: linear-gradient(45deg, rgb(0, 48, 120), rgb(0, 97, 187), rgb(0, 85, 164));
+}

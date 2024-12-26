@@ -1,0 +1,50 @@
+.video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    overflow: hidden; /* Ensures no overflow beyond the viewport */
+}
+
+.video-container video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover; /* Ensures the video covers the entire area without distortion */
+    min-width: 100vw;
+    min-height: 100vh;
+}
+
+.uk-navbar-container {
+    z-index: 1000; /* Ensure it overlays other elements */
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #fff; /* Background color for the navbar */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for better visibility */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Media query for padding-bottom on larger screens */
+@media (min-width: 960px) {
+    .uk-navbar-container {
+        padding-bottom: 5%; /* Apply padding only for desktop view */
+    }
+}
+
+.uk-navbar-center {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+}
+
+.uk-offcanvas-bar {
+    background-color: #fff; /* Background color for the offcanvas bar */
+}
+
+

@@ -1,0 +1,41 @@
+.uk-slideshow-items {
+    overflow: hidden;
+}
+
+.uk-slideshow-items img {
+    object-fit: cover; /* Ensures images are cropped appropriately */
+    width: 100%;
+    height: 100%;
+}
+
+.uk-slideshow-items img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}
+
+.glass-effect {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.2); /* Semi-transparent white */
+    border-radius: 15px;
+    backdrop-filter: blur(10px); /* Blurring the background */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Border for the glass effect */
+    color: #fff; /* Text color */
+    text-align: center;
+}
+
+
+.uk-modal-close-full{
+    border-radius: 10px;
+}
+
+.texto{
+    color: #fff;
+}
+
+
+.fundo-fotos{
+    background: linear-gradient(45deg, rgba(0, 24, 61), rgba(0, 97, 187), rgba(0, 42, 81));
+
+}

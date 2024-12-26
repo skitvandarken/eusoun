@@ -1,0 +1,84 @@
+.uk-form-label{
+    color: white;
+}
+
+.texto{
+    color: white!important;
+}
+
+.fundo-form-card{
+    background: linear-gradient(45deg, rgba(0, 24, 61), rgba(0, 97, 187), rgba(0, 42, 81));
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.fundo {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    bottom: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url('/img/eu-sou-uniao.jpg');
+
+    background-blend-mode: multiply;
+    z-index: -1; /* Push the video behind other content */
+    overflow: auto;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+
+.espacos{
+    padding: 10px;
+}
+
+
+.autocomplete-list {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    max-height: 150px;
+    overflow-y: auto;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    color: white;
+    background-color: #30518f;
+  }
+  .autocomplete-item {
+    padding: 8px 12px;
+    cursor: pointer;
+  }
+  .autocomplete-item:hover {
+    background-color: #f0f0f0;
+    color: #30518f;
+  }
+
+
+  /* Custom CSS Spinner */
+.loading-spinner .spinner {
+    border: 4px solid #f3f3f3; /* Light gray */
+    border-top: 4px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 2s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  .loading-gif {
+    width: 50px; /* Adjust the size */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+  .loading-spinner {
+    text-align: center;
+    padding: 20px;
+  }

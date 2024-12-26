@@ -1,0 +1,14 @@
+.video-container {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Push the video behind other content */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

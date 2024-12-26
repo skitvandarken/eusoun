@@ -1,0 +1,24 @@
+
+.parent-background {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 2rem 0;
+    min-height: 100vh;
+}
+
+.fundo-cartoes{
+    background: linear-gradient(45deg, rgba(0, 24, 61), rgba(0, 97, 187), rgba(0, 42, 81)) !important;
+}
+
+.fundo-acordion{
+
+    background: linear-gradient(45deg, rgba(0, 24, 61), rgba(0, 97, 187), rgba(0, 42, 81));
+}
+
+.texto{
+    color: white;
+}
+
+.fundo{
+    background: linear-gradient(45deg, rgba(0, 24, 61), rgba(0, 97, 187), rgba(0, 42, 81));
+
+}

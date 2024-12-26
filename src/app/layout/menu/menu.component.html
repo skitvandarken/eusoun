@@ -1,0 +1,59 @@
+<nav class="uk-navbar-container uk-navbar-transparent" uk-navbar>
+    <div class="uk-container">
+        <div class="uk-navbar-left uk-hidden@m">
+            <a class="uk-navbar-toggle" uk-navbar-toggle-icon href="#" uk-toggle="target: #offcanvas-nav"></a>
+        </div>
+        
+        <div class="uk-navbar-center uk-visible@m">
+            <ul class="uk-navbar-nav">
+                <li>
+                    <a routerLink="/ubuntu"><button class="fundo-card uk-button-primary uk-border-pill uk-button uk-button-large">[ Eu-Sou-Nós ] </button></a>
+                </li>
+                <li class="uk-active">
+                    <a routerLink="/filmes"><button class="fundo-card uk-button-primary uk-border-pill uk-button uk-button-large"><span uk-icon="icon: play-circle; ratio: 1"></span> FILMES</button></a>
+                </li>
+
+                <li>
+                    <a routerLink="/fotos"><button class="fundo-card uk-button-primary uk-border-pill uk-button uk-button-large"><span uk-icon="icon: image; ratio: 1"></span> FOTOS</button></a>
+                </li>
+                <li>
+                    <a routerLink="/postais"><button class="fundo-card uk-button-primary uk-border-pill uk-button uk-button-large"><span uk-icon="icon: mail; ratio: 1"></span> POSTAIS</button></a>
+                </li>
+                <li>
+                    <a href="https://postal-angolacables-server.fluxo-host.com"><button class="fundo-card uk-button-primary uk-border-pill uk-button uk-button-large"><span uk-icon="icon: comment; ratio: 1"></span> DESEJOS</button></a>
+                </li>
+                <li>
+                    <a target="_blank"  class="uk-navbar-item uk-logo" href="https://qrco.de/bfcBk2"><button class="fundo-card uk-button-primary uk-border-pill uk-button uk-button-large"><img style="height: 50px;" src="/img/aplay.png"></button></a>
+                </li>
+                
+            </ul>
+        </div>
+
+        <div class="uk-navbar-right uk-visible@m"></div>
+    </div>
+</nav>
+
+<div id="offcanvas-nav" uk-offcanvas="overlay: true">
+    <div class="uk-offcanvas-bar">
+        <ul class="uk-nav uk-nav-default">
+            <li>
+                <a routerLink="/ubuntu"><button class="fundo-card uk-button-primary uk-border-pill uk-button uk-button-large"> [ Eu-Sou-Nós ] </button></a>
+            </li>
+            <li class="">
+                <a routerLink="/filmes"><button class="fundo-card uk-button-primary uk-border-pill uk-button uk-button-large"><span uk-icon="icon: play-circle; ratio: 1"></span> FILMES</button></a>
+            </li>
+            <li>
+                <a routerLink="/fotos"><button class="fundo-card uk-button-primary uk-border-pill uk-button uk-button-large"><span uk-icon="icon: image; ratio: 1"></span> FOTOS</button></a>
+            </li>
+            <li>
+                <a routerLink="/postais"><button class="fundo-card uk-button-primary uk-border-pill uk-button uk-button-large"><span uk-icon="icon: mail; ratio: 1"></span> POSTAIS</button></a>
+            </li>
+            <li>
+                <a href="https://postal-angolacables-server.fluxo-host.com"><button class="fundo-card uk-button-primary uk-border-pill uk-button uk-button-large"><span uk-icon="icon: comment; ratio: 1"></span> DESEJOS</button></a>
+            </li>
+            <li>
+                <a target="_blank" href="https://qrco.de/bfcBk2"><button class="fundo-card uk-button-primary uk-border-pill uk-button uk-button-large"><img style="height: 50px;" src="/img/logo-blue.png"></button></a>
+            </li>
+        </ul>
+    </div>
+</div>

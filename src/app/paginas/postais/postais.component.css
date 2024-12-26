@@ -1,0 +1,36 @@
+.uk-form-label{
+    color: white;
+}
+
+.texto{
+    color: white!important;
+}
+
+.fundo-form-card{
+    background: linear-gradient(45deg, rgba(0, 24, 61), rgba(0, 97, 187), rgba(0, 42, 81));
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.fundo {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    bottom: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url('/img/eu-sou-uniao.jpg');
+
+    background-blend-mode: multiply;
+    z-index: -1; /* Push the video behind other content */
+    overflow: auto;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+
+.espacos{
+    padding: 10px;
+}
