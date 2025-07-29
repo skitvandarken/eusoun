@@ -5,6 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build:prerender": "NG_PAGES_TIMEOUT=120000 ng build --prerender",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:eusounos": "node dist/eusounos/server/server.mjs"
