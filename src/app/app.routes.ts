@@ -7,7 +7,6 @@ import { EventosComponent } from './paginas/eventos/eventos.component';
 import { DesejosComponent } from './layout/desejos/desejos.component';
 import { UbuntuComponent } from './paginas/ubuntu/ubuntu.component';
 import { TesteComponent } from './paginas/teste/teste.component';
-import { AlbumCriarComponent } from './layout/album-criar/album-criar.component';
 import { MulherComponent } from './paginas/mulher/mulher.component';
 
 export const routes: Routes = [
@@ -19,7 +18,6 @@ export const routes: Routes = [
     { path: 'desejos', component: DesejosComponent },
     { path: 'ubuntu', component: UbuntuComponent },
     { path: 'teste', component: TesteComponent },
-    { path: 'album-criar', component: AlbumCriarComponent },
     { path: 'mulher', component: MulherComponent },
 
 
