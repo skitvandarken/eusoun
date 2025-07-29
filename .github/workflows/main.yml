@@ -59,7 +59,7 @@ jobs:
           WEBDISK_PASSWORD: ${{ secrets.WEBDISK_PASSWORD }}
         run: |
           # ===== CONFIGURATION =====
-          BUILD_DIR="dist/tcng/browser"
+          BUILD_DIR="dist/eusounos/browser"
           WEBDISK_URL="https://eu-sou-nos.angolacables.co.ao:2078"
           
           # Protected items (won't be touched)
