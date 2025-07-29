@@ -1,0 +1,208 @@
+:host {
+    display: block;
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.controls {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    max-width: 500px;
+}
+
+.postcard-preview {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    max-width: 600px;
+}
+
+#postcard {
+    width: 400px;
+    height: 500px;
+    background-image: url('/img/wit-2.png');
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    color: #ffffff;
+    text-align: center;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+
+
+.postcard-header {
+    font-size: 24px;
+    font-weight: 700;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+    line-height: 1.2;
+    padding: 10px 0;
+    background: rgba(0, 0, 0, 0.3);
+    /* Semi-transparent background for readability */
+    width: 100%;
+    border-radius: 8px;
+}
+
+.profile-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    margin-bottom: 15px;
+}
+
+.profile-info {
+    margin-top: auto;
+    /* Pushes content to the bottom */
+    background: rgba(0, 0, 0, 0.4);
+    /* Semi-transparent background for readability */
+    padding: 15px;
+    border-radius: 8px;
+    width: 100%;
+}
+
+.profile-name {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+.profile-position {
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 10px;
+    opacity: 0.9;
+}
+
+.profile-message {
+    font-size: 18px;
+    font-style: italic;
+    line-height: 1.4;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+
+    /* Add these */
+    max-width: 100%;
+    max-height: 150px; /* adjust to fit your design */
+    overflow: hidden;
+    word-wrap: break-word;
+    white-space: pre-wrap; /* keeps line breaks from textarea */
+    text-overflow: ellipsis;
+}
+.uk-button {
+    border-radius: 8px;
+    font-weight: 600;
+    text-transform: none;
+    padding: 10px 20px;
+    transition: all 0.2s ease;
+}
+
+.uk-button-primary {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.uk-button-primary:hover {
+    background-color: #0056b3;
+}
+
+.uk-button-secondary {
+    background-color: #6c757d;
+    color: #fff;
+}
+
+.uk-button-secondary:hover {
+    background-color: #5a6268;
+}
+
+.uk-button-success {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.uk-button-success:hover {
+    background-color: #218838;
+}
+
+.uk-button-social {
+    background-color: #1DA1F2;
+    /* Twitter blue */
+    color: #fff;
+}
+
+.uk-button-social.facebook {
+    background-color: #3b5998;
+}
+
+.uk-button-social.whatsapp {
+    background-color: #25D366;
+}
+
+.uk-button-social.linkedin {
+    background-color: #0077B5;
+}
+
+.uk-form-label {
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.uk-input,
+.uk-textarea {
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    padding: 10px 15px;
+}
+
+/* Responsive adjustments */
+@media (min-width: 960px) {
+    .container {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    .controls {
+        flex: 1;
+        margin-right: 30px;
+    }
+
+    .postcard-preview {
+        flex: 1;
+        max-width: none;
+        /* Allow it to take available space */
+    }
+}
+
+/* ... rest of the styles remain the same ... */

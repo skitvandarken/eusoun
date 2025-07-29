@@ -1,0 +1,72 @@
+<div class="uk-container-small uk-text-center">
+    <img src="img/logo-mulher.png">
+
+</div>
+
+<div class="container">
+    <!-- Controls Section -->
+    <div class="controls uk-card uk-card-default uk-card-body">
+        <h3 class="uk-card-title"> Personalize o seu postal</h3>
+
+        <!-- Name Input -->
+        <div class="uk-margin">
+            <label class="uk-form-label" for="name">Nome</label>
+            <input class="uk-input" id="name" type="text" [ngModel]="name()" (ngModelChange)="onNameChange($event)"
+                placeholder="Your Name" />
+        </div>
+
+        <!-- Position Input -->
+        <div class="uk-margin">
+            <label class="uk-form-label" for="position">Posição</label>
+            <input class="uk-input" id="position" type="text" [ngModel]="position()"
+                (ngModelChange)="onPositionChange($event)" placeholder="Your Position" />
+        </div>
+
+        <!-- Message Textarea -->
+        <div class="uk-margin">
+            <label class="uk-form-label" for="message">Mensagem</label>
+            <textarea class="uk-textarea" id="message" rows="8" [ngModel]="message()"
+                (ngModelChange)="onMessageChange($event)" placeholder="Your inspiring message"></textarea>
+        </div>
+
+        <hr class="uk-divider-icon" />
+
+        <div class="uk-margin">
+            <button class="uk-button uk-button-success uk-width-1-1 uk-margin-small-bottom"
+                (click)="downloadPostcard('png')">
+                Descarregar como PNG
+            </button>
+            <button class="uk-button uk-button-secondary uk-width-1-1" (click)="downloadPostcard('jpeg')">
+                Descarregar como JPG
+            </button>
+        </div>
+
+        <hr class="uk-divider-icon" />
+
+        <h4 class="uk-text-center">Partilhar </h4>
+        <div class="uk-grid uk-grid-small uk-child-width-1-2@s uk-text-center" uk-grid>
+            @for (platform of socialPlatforms; track platform) {
+            <div>
+                <button class="uk-button uk-button-social {{ platform }} uk-width-1-1" (click)="shareOn(platform)">
+                    {{ platform | titlecase }}
+                </button>
+            </div>
+            }
+        </div>
+
+    </div>
+
+    <!-- Postcard Preview -->
+    <div class="postcard-preview">
+        <div #postcardRef id="postcard">
+            <div class="postcard-header">Dia da Mulher Africana<br /> <img src="img/logo-mulher.png"></div>
+            <img class="profile-photo" [src]="profilePhoto()" alt="Profile Photo" />
+            <div class="profile-info">
+                                <div class="profile-message"><p> {{ message() }} </p> </div>
+
+                <div class="profile-name">{{ name() }}</div>
+                <div class="profile-position">{{ position() }}</div>
+            </div>
+        </div>
+    </div>
+</div>
