@@ -1,0 +1,31 @@
+{
+  "name": "rh-album-api",
+  "version": "1.0.0",
+  "description": "API Node.js para gerenciamento de álbuns Eu-Sou-Nos.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "mysql",
+    "multer",
+    "api",
+    "eu-sou-nos",
+    "albums"
+  ],
+  "author": "Lukeba Pedro Jorge",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "multer": "^1.4.5-lts.1",
+    "mysql2": "^3.9.7"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}

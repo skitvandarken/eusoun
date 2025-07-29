@@ -1,0 +1,83 @@
+<div class="uk-container  uk-margin-small-bottom uk-text-center">
+  <h2 style="color: #fff;" class=" uk-text-center uk-margin-medium-top"><span>Criar Novo Álbum</span></h2>
+
+  <!-- Mensagem de erro -->
+  <div class="uk-alert-danger" uk-alert *ngIf="errorMessage">
+    <p>{{ errorMessage }}</p>
+  </div>
+
+  <form (ngSubmit)="onSubmit()" #albumForm="ngForm" novalidate class="uk-form-stacked">
+
+    <!-- Título do Álbum -->
+    <div class="uk-margin">
+      <label style="color: #fff;" class="uk-form-label" for="title">Título do Álbum</label>
+      <div class="uk-form-controls">
+        <input
+          class="uk-input uk-form-width-large uk-border-rounded"
+          id="title"
+          name="title"
+          type="text"
+          placeholder="Ex: Viagem à Serra"
+          [(ngModel)]="newAlbum.title"
+          required
+        />
+      </div>
+    </div>
+
+    <!-- URL da Imagem de Capa -->
+    <div class="uk-margin">
+      <label style="color: #fff;" class="uk-form-label" for="coverUrl">URL da Imagem de Capa</label>
+      <div class="uk-form-controls">
+        <input
+          class="uk-input uk-form-width-medium uk-border-rounded"
+          id="coverUrl"
+          name="coverUrl"
+          type="text"
+          placeholder="https://example.com/imagem.jpg"
+          [(ngModel)]="featuredImagerUrl"
+        />
+      </div>
+      <div class="uk-margin-small-top" *ngIf="featuredImagerUrl">
+        <img [src]="featuredImagerUrl" alt="Pré-visualização da capa" class="uk-border-rounded" style="max-height: 200px;" />
+      </div>
+    </div>
+
+    <!-- URLs das Imagens do Álbum -->
+    <div class="uk-margin">
+      <label style="color: #fff;" class="uk-form-label" for="albumItems">URLs das Imagens (separadas por vírgula)</label>
+      <div class="uk-form-controls">
+        <textarea
+          class="uk-textarea uk-form-width-medium uk-border-rounded"
+          id="albumItems"
+          name="albumItems"
+          rows="3"
+          placeholder="https://img1.jpg, https://img2.jpg"
+          [(ngModel)]="albumItemsInput"
+        ></textarea>
+      </div>
+      <div class="uk-margin-small-top uk-child-width-1-4@s uk-grid-small uk-grid-match" uk-grid *ngIf="parsedAlbumItems.length">
+        <div *ngFor="let img of parsedAlbumItems">
+          <img [src]="img" alt="Prévia" class="uk-border-rounded" style="width: 100%; object-fit: cover;" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Botão de envio -->
+    <div class="uk-margin">
+      <button
+        class="uk-button uk-border-pill uk-button-secondary uk-button-small"
+        type="submit"
+        [disabled]="isSubmitting || !newAlbum.title.trim()"
+      >
+        <span class="uk-padding" style="color: #fff;" *ngIf="!isSubmitting">Criar Álbum</span>
+        <span *ngIf="isSubmitting">
+          <div uk-spinner="ratio: 0.6" class="uk-margin-small-right"></div> Salvando...
+        </span>
+      </button>
+    </div>
+  </form>
+</div>
+
+
+
+<app-album-listar></app-album-listar>

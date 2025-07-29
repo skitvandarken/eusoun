@@ -1,22 +1,28 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background: linear-gradient(45deg, rgba(0, 24, 61), rgba(0, 97, 187), rgba(0, 42, 81));
-    z-index: -1; /* Push the video behind other content */
-    height: 100vh;
-    min-height: 100vh; /* Ensure the body is at least the height of the viewport */
-    width: 100%;
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
-    position: relative; /* Ensure positioning context */
+  min-height: 100vh;
+  background: linear-gradient(135deg, rgba(0, 24, 61), rgba(0, 97, 187), rgba(0, 42, 81));
+  background-repeat: no-repeat;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #fff;
+  overflow-x: hidden;
+  z-index: 0;
 }
 
 
-html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    width: 100%;
+
+/* Exemplo de ajuste em botões (opcional) */
+.uk-button {
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
+.uk-button:hover {
+  background-color: #004080;
+  transform: scale(1.05);
+}

@@ -1,0 +1,46 @@
+<div class="uk-container uk-margin-large">
+
+    <!-- Grid Layout for Albums -->
+    <div class="uk-grid uk-child-width-1-1@s uk-child-width-1-3@m uk-text-center" uk-grid>
+
+
+
+        <div *ngFor="let album of albums; let i = index">
+            <div class="uk-card uk-card-body uk-transition-toggle">
+                <img class="hover uk-border-rounded" [src]="album.coverUrl" [alt]="album.title"
+                    [attr.uk-toggle]="'target: #modal-' + i" />
+                <button class="uk-button uk-button-primary uk-border-pill uk-margin-top" (click)="openModal(i)">
+                    Ver Fotos
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Modal for each album -->
+    <ng-container *ngFor="let album of albums; let i = index">
+        <div *ngIf="activeModalIndex === i" class="uk-modal-full" [id]="'modal-' + i" uk-modal>
+            <div class="uk-modal-dialog glass-effect uk-modal-body">
+                <button class="uk-modal-close-full" type="button" uk-close></button>
+                <div class="uk-slideshow" uk-slideshow="animation: slide;">
+                    <ul class="uk-slideshow-items">
+                        <li *ngFor="let img of album.images">
+                            <img [src]="img" [alt]="'Imagem do álbum ' + album.title" />
+                        </li>
+                    </ul>
+
+                    <!-- Navigation -->
+                    <a class="uk-slidenav-large uk-position-center-left uk-position-small" href="#" uk-slidenav-previous
+                        uk-slideshow-item="previous" style="color: white"></a>
+                    <a class="uk-slidenav-large uk-position-center-right uk-position-small" href="#" uk-slidenav-next
+                        uk-slideshow-item="next" style="color: white"></a>
+                </div>
+            </div>
+        </div>
+    </ng-container>
+
+</div>
+
+
+
+<app-menu></app-menu>

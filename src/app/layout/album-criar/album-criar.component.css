@@ -1,0 +1,38 @@
+.album-criar-container {
+  max-width: 600px;
+  margin: auto;
+  padding: 1rem;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.preview-img,
+.thumb {
+  max-width: 100%;
+  max-height: 150px;
+  margin-top: 0.5rem;
+  border-radius: 4px;
+}
+
+.image-thumbs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 0.5rem;
+}
+
+.thumb {
+  width: 100px;
+  height: auto;
+  object-fit: cover;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.error-message {
+  color: #b00020;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}

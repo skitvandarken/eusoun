@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { MenuComponent } from '../layout/menu/menu.component';
+import { FooterComponent } from '../layout/footer/footer.component';
 
 @Component({
   selector: 'app-inicio',
   imports: [
-    MenuComponent,
+    MenuComponent,FooterComponent
     
 ],
   templateUrl: './inicio.component.html',

@@ -11,4 +11,6 @@ import { MenuComponent } from '../../layout/menu/menu.component';
 })
 export class FotosComponent {
 
+  
+
 }
