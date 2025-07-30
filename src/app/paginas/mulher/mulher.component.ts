@@ -17,8 +17,14 @@ export class MulherComponent {
 
   // Hardcoded names list (sorted alphabetically)
   readonly allNames = [
-    { name: 'Aida Pascoal', photo: 'img/mulheres/aidapascual.jpg' },
+    { name: 'Aida Pascoal', photo: 'img/mulheres/enhaced/aidapascual-Picsart-AiImageEnhancer.jpg' },
+    { name: 'Defesa Manuel', photo: 'img/mulheres/enhaced/defesa-Picsart-AiImageEnhancer.jpg.jpg' },
+    { name: 'Djamila Caetano', photo: 'img/mulheres/enhaced/djamilac-Picsart-AiImageEnhancer.jpg' },
+    { name: 'Graciete Brandão', photo: 'img/mulheres/enhaced/graciete-Picsart-AiImageEnhancer.jpg' },
+    { name: 'Vita Ngombo', photo: 'img/mulheres/enhaced/vita-Picsart-AiImageEnhancer.jpg' },
+    { name: 'Maria Jéssica', photo: 'img/mulheres/enhaced/maria-Picsart-AiImageEnhancer.jpg' },
     { name: 'Amanda Arruda de Souza e Silva', photo: 'img/mulheres/enhaced/amanda-Picsart-AiImageEnhancer.jpg' },
+    { name: 'Roberta da Silva', photo: 'img/mulheres/enhaced/roberta-Picsart-AiImageEnhancer.jpg' },
     { name: 'Ana Virginia Oliveira P. Sales Ferreira', photo: 'img/mulheres/enhaced/anavirjinia-Picsart-AiImageEnhancer.jpg' },
     { name: 'Andrea de Oliveira Brito', photo: 'img/mulheres/enhaced/andrea-Picsart-AiImageEnhancer.jpg' },
     { name: 'Ariete Pereira', photo: 'img/mulheres/enhaced/ariete-Picsart-AiImageEnhancer.jpg' },
@@ -27,8 +33,16 @@ export class MulherComponent {
     { name: 'Bruna Lassakowski Fontes', photo: 'img/mulheres/enhaced/bruna-Picsart-AiImageEnhancer.jpg' },
     { name: 'Celma Paulo', photo: 'img/mulheres/enhaced/celma-Picsart-AiImageEnhancer.jpg' },
     { name: 'Cicera Silvaneida Bezerra Cezario', photo: 'img/mulheres/cicera.jpg' },
-    { name: 'Cláudia Couceiro', photo: 'img/mulheres/claudia.jpg' },
-    { name: 'Cristina Amálua', photo: 'img/mulheres/cristina.jpg' },
+    { name: 'Cláudia Couceiro', photo: 'img/mulheres/enhaced/claudia-Picsart-AiImageEnhancer.jpg' },
+    { name: 'Cristina Amálua', photo: 'img/mulheres/enhaced/cristina-Picsart-AiImageEnhancer.jpg' },
+    { name: 'Beatriz Jordão', photo: 'img/mulheres/enhaced/beatriz-Picsart-AiImageEnhancer.jpg' },
+    { name: 'Vanusa Gomes', photo: 'img/mulheres/enhaced/vanusa-Picsart-AiImageEnhancer.jpg' },
+    { name: 'Niura Fernandes', photo: 'img/mulheres/enhaced/niura-Picsart-AiImageEnhancer.jpg' },
+    { name: 'Neiriciany Mata', photo: 'img/mulheres/enhaced/neiriciany-Picsart-AiImageEnhancer.jpg' },
+    { name: 'Mirian Tavares', photo: 'img/mulheres/enhaced/mirian-Picsart-AiImageEnhancer.jpg' },
+    { name: 'Lizeth Bastos', photo: 'img/mulheres/enhaced/lizeth-Picsart-AiImageEnhancer.jpg' },
+    { name: 'Rosa Sardinha', photo: 'img/mulheres/enhaced/rosa-Picsart-AiImageEnhancer.jpg' },
+
     { name: 'Daniele Sousa da Silva Maranhão', photo: 'img/mulheres/daniele.jpg' },
     { name: 'Daynara da Silva Lacerda', photo: 'img/mulheres/enhaced/daynara-Picsart-AiImageEnhancer.jpg' },
     { name: 'Djamila Caetano', photo: 'img/mulheres/enhaced/djamila-Picsart-AiImageEnhancer.jpg' },
@@ -139,7 +153,7 @@ export class MulherComponent {
   }
 
   onPositionChange(value: string): void {
-      this.searchQuery.set(value);
+    this.searchQuery.set(value);
     this.position.set(value);
   }
 
