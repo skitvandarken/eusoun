@@ -17,45 +17,45 @@ export class MulherComponent {
 
   // Hardcoded names list (sorted alphabetically)
   readonly allNames = [
-    
-    { name: 'Aida Pascoal', photo: 'img/mulheres/aidapasqual.jpg' },
-    { name: 'Amanda Arruda de Souza e Silva', photo: 'img/mulheres/amanda.jpg' },
-    { name: 'Ana Virginia Oliveira P. Sales Ferreira', photo: 'img/mulheres/ana virijna.jpg' },
-    { name: 'Andrea de Oliveira Brito', photo: 'img/mulheres/andrea.jpg' },
-    { name: 'Ariete', photo: 'img/mulheres/ariete.jpg' },
-    { name: 'Beatriz J.D.', photo: 'img/mulheres/beatrizjd.jpg' },
-    { name: 'Brigida', photo: 'img/mulheres/brigida.jpg' },
-    { name: 'Bruna', photo: 'img/mulheres/bruna.jpg' },
-    { name: 'Brunilde', photo: 'img/mulheres/brunilde.jpg' },
-    { name: 'Celma', photo: 'img/mulheres/celma.jpg' },
-    { name: 'Cicera', photo: 'img/mulheres/cicera.jpg' },
-    { name: 'Claudia', photo: 'img/mulheres/claudia.jpg' },
-    { name: 'Cristina', photo: 'img/mulheres/cristina.jpg' },
-    { name: 'Daniele', photo: 'img/mulheres/daniele.jpg' },
-    { name: 'Daynara', photo: 'img/mulheres/daynara.jpg' },
-    { name: 'Djamila', photo: 'img/mulheres/djamila.jpg' },
-    { name: 'Dorcas', photo: 'img/mulheres/dorcas.jpg' },
-    { name: 'Elizabeht', photo: 'img/mulheres/elizabeht.jpg' },
-    { name: 'Elizabeth', photo: 'img/mulheres/elizabeth.jpg' },
-    { name: 'Elizandra', photo: 'img/mulheres/elizandra.jpg' },
-    { name: 'Evarolim', photo: 'img/mulheres/evarolim.jpg' },
-    { name: 'Izilda', photo: 'img/mulheres/izilda.jpg' },
-    { name: 'Jacqueline', photo: 'img/mulheres/jacqueline.jpg' },
-    { name: 'Jofrina', photo: 'img/mulheres/jofrina.jpg' },
-    { name: 'Josefina', photo: 'img/mulheres/josefina.jpg' },
-    { name: 'Julieta', photo: 'img/mulheres/julieta.jpg' },
-    { name: 'Kamila', photo: 'img/mulheres/kamila.jpg' },
-    { name: 'Karolini', photo: 'img/mulheres/karolini.jpg' },
-    { name: 'Laura', photo: 'img/mulheres/laura.jpg' },
-    { name: 'Lilia', photo: 'img/mulheres/lilia.jpg' },
-    { name: 'Lionboabb', photo: 'img/mulheres/lionboabb.jpg' },
-    { name: 'Pamela', photo: 'img/mulheres/pamela.jpg' },
+    { name: 'Aida Pascoal', photo: 'img/mulheres/aidapascual.jpg' },
+{ name: 'Amanda Arruda de Souza e Silva', photo: 'img/mulheres/amanda.jpg' },
+{ name: 'Ana Virginia Oliveira P. Sales Ferreira', photo: 'img/mulheres/anavirjinia.jpg' },
+{ name: 'Andrea de Oliveira Brito', photo: 'img/mulheres/andrea.jpg' },
+{ name: 'Ariete Pereira', photo: 'img/mulheres/ariete.jpg' },
+{ name: 'Beatriz Jordão', photo: 'img/mulheres/beatrizjd.jpg' },
+{ name: 'Brigida Fortunato', photo: 'img/mulheres/brigida.jpg' },
+{ name: 'Bruna Lassakowski Fontes', photo: 'img/mulheres/bruna.jpg' },
+{ name: 'Brunilde Caxala', photo: 'img/mulheres/brunilde.jpg' },
+{ name: 'Celma Paulo', photo: 'img/mulheres/celma.jpg' },
+{ name: 'Cicera Silvaneida Bezerra Cezario', photo: 'img/mulheres/cicera.jpg' },
+{ name: 'Cláudia Couceiro', photo: 'img/mulheres/claudia.jpg' },
+{ name: 'Cristina Amálua', photo: 'img/mulheres/cristina.jpg' },
+{ name: 'Daniele Sousa da Silva Maranhão', photo: 'img/mulheres/daniele.jpg' },
+{ name: 'Daynara da Silva Lacerda', photo: 'img/mulheres/daynara.jpg' },
+{ name: 'Djamila Caetano', photo: 'img/mulheres/djamila.jpg' },
+{ name: 'Dorcas Maria', photo: 'img/mulheres/dorcas.jpg' },
+{ name: 'Elizabeth Francisco', photo: 'img/mulheres/elizabeht.jpg' },
+{ name: 'Elizabeth Francisco', photo: 'img/mulheres/elizabeth.jpg' },
+{ name: 'Elizandra Companhia', photo: 'img/mulheres/elizandra.jpg' },
+{ name: 'Eva Janine Ricarte Rolim', photo: 'img/mulheres/evarolim.jpg' },
+{ name: 'Izilda Tanda', photo: 'img/mulheres/izilda.jpg' },
+{ name: 'Jacqueline Kitching', photo: 'img/mulheres/jacqueline.jpg' },
+{ name: 'Jofrina Lima', photo: 'img/mulheres/jofrina.jpg' },
+{ name: 'Josefina Francisco', photo: 'img/mulheres/josefina.jpg' },
+{ name: 'Julieta Delgado', photo: 'img/mulheres/julieta.jpg' },
+{ name: 'Kamilla de Lemos Caldas', photo: 'img/mulheres/kamila.jpg' },
+{ name: 'Karoline Holanda Costa Trevizani', photo: 'img/mulheres/karolini.jpg' },
+{ name: 'Laura Carneiro', photo: 'img/mulheres/laura.jpg' },
+{ name: 'Lília Carvalho', photo: 'img/mulheres/lilia.jpg' },
+{ name: 'Marinela Liomba', photo: 'img/mulheres/lionboabb.jpg' },
+{ name: 'Pamela Bráz', photo: 'img/mulheres/pamela.jpg' },
+
   ];
 
   postcardElement = viewChild.required<ElementRef<HTMLDivElement>>('postcardRef');
 
   // Reactive state with signals
-  selectedPhoto = signal('assets/photos/default.jpg');
+  selectedPhoto = signal('/img/mulheres/default.jpg');
   name = signal('Seu nome aqui');
   position = signal('Posição');
   message = signal('Sua mensagem aqui');
