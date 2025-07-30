@@ -7,48 +7,48 @@ import { MenuComponent } from '../../layout/menu/menu.component';
 @Component({
   selector: 'app-mulher',
   standalone: true,
-  imports: [CommonModule, FormsModule, MenuComponent ],
+  imports: [CommonModule, FormsModule, MenuComponent],
   templateUrl: './mulher.component.html',
   styleUrl: './mulher.component.css'
 })
 export class MulherComponent {
   readonly socialPlatforms = ['facebook', 'twitter', 'whatsapp', 'linkedin'] as const;
-  
+
 
   // Hardcoded names list (sorted alphabetically)
   readonly allNames = [
     { name: 'Aida Pascoal', photo: 'img/mulheres/aidapascual.jpg' },
-{ name: 'Amanda Arruda de Souza e Silva', photo: 'img/mulheres/amanda.jpg' },
-{ name: 'Ana Virginia Oliveira P. Sales Ferreira', photo: 'img/mulheres/anavirjinia.jpg' },
-{ name: 'Andrea de Oliveira Brito', photo: 'img/mulheres/andrea.jpg' },
-{ name: 'Ariete Pereira', photo: 'img/mulheres/ariete.jpg' },
-{ name: 'Beatriz Jordão', photo: 'img/mulheres/beatrizjd.jpg' },
-{ name: 'Brigida Fortunato', photo: 'img/mulheres/brigida.jpg' },
-{ name: 'Bruna Lassakowski Fontes', photo: 'img/mulheres/bruna.jpg' },
-{ name: 'Brunilde Caxala', photo: 'img/mulheres/brunilde.jpg' },
-{ name: 'Celma Paulo', photo: 'img/mulheres/celma.jpg' },
-{ name: 'Cicera Silvaneida Bezerra Cezario', photo: 'img/mulheres/cicera.jpg' },
-{ name: 'Cláudia Couceiro', photo: 'img/mulheres/claudia.jpg' },
-{ name: 'Cristina Amálua', photo: 'img/mulheres/cristina.jpg' },
-{ name: 'Daniele Sousa da Silva Maranhão', photo: 'img/mulheres/daniele.jpg' },
-{ name: 'Daynara da Silva Lacerda', photo: 'img/mulheres/daynara.jpg' },
-{ name: 'Djamila Caetano', photo: 'img/mulheres/djamila.jpg' },
-{ name: 'Dorcas Maria', photo: 'img/mulheres/dorcas.jpg' },
-{ name: 'Elizabeth Francisco', photo: 'img/mulheres/elizabeht.jpg' },
-{ name: 'Elizabeth Francisco', photo: 'img/mulheres/elizabeth.jpg' },
-{ name: 'Elizandra Companhia', photo: 'img/mulheres/elizandra.jpg' },
-{ name: 'Eva Janine Ricarte Rolim', photo: 'img/mulheres/evarolim.jpg' },
-{ name: 'Izilda Tanda', photo: 'img/mulheres/izilda.jpg' },
-{ name: 'Jacqueline Kitching', photo: 'img/mulheres/jacqueline.jpg' },
-{ name: 'Jofrina Lima', photo: 'img/mulheres/jofrina.jpg' },
-{ name: 'Josefina Francisco', photo: 'img/mulheres/josefina.jpg' },
-{ name: 'Julieta Delgado', photo: 'img/mulheres/julieta.jpg' },
-{ name: 'Kamilla de Lemos Caldas', photo: 'img/mulheres/kamila.jpg' },
-{ name: 'Karoline Holanda Costa Trevizani', photo: 'img/mulheres/karolini.jpg' },
-{ name: 'Laura Carneiro', photo: 'img/mulheres/laura.jpg' },
-{ name: 'Lília Carvalho', photo: 'img/mulheres/lilia.jpg' },
-{ name: 'Marinela Liomba', photo: 'img/mulheres/lionboabb.jpg' },
-{ name: 'Pamela Bráz', photo: 'img/mulheres/pamela.jpg' },
+    { name: 'Amanda Arruda de Souza e Silva', photo: 'img/mulheres/amanda.jpg' },
+    { name: 'Ana Virginia Oliveira P. Sales Ferreira', photo: 'img/mulheres/anavirjinia.jpg' },
+    { name: 'Andrea de Oliveira Brito', photo: 'img/mulheres/andrea.jpg' },
+    { name: 'Ariete Pereira', photo: 'img/mulheres/ariete.jpg' },
+    { name: 'Beatriz Jordão', photo: 'img/mulheres/beatrizjd.jpg' },
+    { name: 'Brigida Fortunato', photo: 'img/mulheres/brigida.jpg' },
+    { name: 'Bruna Lassakowski Fontes', photo: 'img/mulheres/bruna.jpg' },
+    { name: 'Brunilde Caxala', photo: 'img/mulheres/brunilde.jpg' },
+    { name: 'Celma Paulo', photo: 'img/mulheres/celma.jpg' },
+    { name: 'Cicera Silvaneida Bezerra Cezario', photo: 'img/mulheres/cicera.jpg' },
+    { name: 'Cláudia Couceiro', photo: 'img/mulheres/claudia.jpg' },
+    { name: 'Cristina Amálua', photo: 'img/mulheres/cristina.jpg' },
+    { name: 'Daniele Sousa da Silva Maranhão', photo: 'img/mulheres/daniele.jpg' },
+    { name: 'Daynara da Silva Lacerda', photo: 'img/mulheres/daynara.jpg' },
+    { name: 'Djamila Caetano', photo: 'img/mulheres/djamila.jpg' },
+    { name: 'Dorcas Maria', photo: 'img/mulheres/dorcas.jpg' },
+    { name: 'Elizabeth Francisco', photo: 'img/mulheres/elizabeht.jpg' },
+    { name: 'Elizabeth Francisco', photo: 'img/mulheres/elizabeth.jpg' },
+    { name: 'Elizandra Companhia', photo: 'img/mulheres/elizandra.jpg' },
+    { name: 'Eva Janine Ricarte Rolim', photo: 'img/mulheres/evarolim.jpg' },
+    { name: 'Izilda Tanda', photo: 'img/mulheres/izilda.jpg' },
+    { name: 'Jacqueline Kitching', photo: 'img/mulheres/jacqueline.jpg' },
+    { name: 'Jofrina Lima', photo: 'img/mulheres/jofrina.jpg' },
+    { name: 'Josefina Francisco', photo: 'img/mulheres/josefina.jpg' },
+    { name: 'Julieta Delgado', photo: 'img/mulheres/julieta.jpg' },
+    { name: 'Kamilla de Lemos Caldas', photo: 'img/mulheres/kamila.jpg' },
+    { name: 'Karoline Holanda Costa Trevizani', photo: 'img/mulheres/karolini.jpg' },
+    { name: 'Laura Carneiro', photo: 'img/mulheres/laura.jpg' },
+    { name: 'Lília Carvalho', photo: 'img/mulheres/lilia.jpg' },
+    { name: 'Marinela Liomba', photo: 'img/mulheres/lionboabb.jpg' },
+    { name: 'Pamela Bráz', photo: 'img/mulheres/pamela.jpg' },
 
   ];
 
@@ -56,20 +56,20 @@ export class MulherComponent {
 
   // Reactive state with signals
   selectedPhoto = signal('/img/mulheres/default.jpg');
-  name = signal('Seu nome aqui');
-  position = signal('Posição');
-  message = signal('Sua mensagem aqui');
+  name = signal('');
+  position = signal('');
+  message = signal('');
   showNameDropdown = signal(false);
   searchQuery = signal('');
 
   // Computed filtered names
- filteredNames = computed(() => {
-  if (!this.searchQuery()) return this.allNames.slice(0, 5);
-  return this.allNames.filter(item => 
-    item.name.toLowerCase().includes(this.searchQuery().toLowerCase())
-  ).slice(0, 10);
-});
-
+  filteredNames = computed(() => {
+    const query = this.searchQuery().trim().toLowerCase();
+    if (query.length < 2) return [];
+    return this.allNames
+      .filter(item => item.name.toLowerCase().includes(query))
+      .slice(0, 10);
+  });
   // Profile photos mapping
   private readonly profilePhotos = {
     'Maria Silva': 'https://placehold.co/120x120/007bff/ffffff?text=Maria',
@@ -79,6 +79,22 @@ export class MulherComponent {
     'Default': 'https://placehold.co/120x120/6c757d/ffffff?text=Foto',
   } as const;
 
+  onKeyDown(event: KeyboardEvent): void {
+    const results = this.filteredNames();
+    const index = this.activeIndex();
+    if (!results.length) return;
+
+    if (event.key === 'ArrowDown') {
+      event.preventDefault();
+      this.activeIndex.set((index + 1) % results.length);
+    } else if (event.key === 'ArrowUp') {
+      event.preventDefault();
+      this.activeIndex.set((index - 1 + results.length) % results.length);
+    } else if (event.key === 'Enter' && index >= 0) {
+      event.preventDefault();
+      this.selectName(results[index]);
+    }
+  }
   // Computed profile photo
   profilePhoto = computed(() => {
     const currentName = this.name().trim();
@@ -86,18 +102,38 @@ export class MulherComponent {
       || this.profilePhotos.Default;
   });
 
+  loading = signal(false);
+
+
+  activeIndex = signal(-1); // to track keyboard navigation
+
   // Event handlers
   onNameSearchChange(value: string): void {
     this.searchQuery.set(value);
-    this.showNameDropdown.set(true);
+    // Reset results and show spinner while "retrieving"
+    this.loading.set(true);
+
+    clearTimeout((this as any).typingTimeout);
+    (this as any).typingTimeout = setTimeout(() => {
+      this.showNameDropdown.set(true);
+      this.loading.set(false);
+    }, 300); // 300ms delay simulates gradual retrieval
+
   }
 
-selectName(selected: { name: string; photo: string }): void {
-  this.name.set(selected.name);
-  this.searchQuery.set(selected.name);
-  this.selectedPhoto.set(selected.photo);
-  this.showNameDropdown.set(false);
-}
+  highlightMatch(name: string, query: string): string {
+    const regex = new RegExp(`(${query})`, 'gi');
+    return name.replace(regex, '<strong>$1</strong>');
+  }
+  closeDropdown(): void {
+    this.showNameDropdown.set(false);
+  }
+  selectName(selected: { name: string; photo: string }): void {
+    this.name.set(selected.name);
+    this.searchQuery.set(selected.name);
+    this.selectedPhoto.set(selected.photo);
+    this.showNameDropdown.set(false);
+  }
   onNameInputBlur(): void {
     setTimeout(() => {
       this.showNameDropdown.set(false);
@@ -105,10 +141,12 @@ selectName(selected: { name: string; photo: string }): void {
   }
 
   onPositionChange(value: string): void {
+      this.searchQuery.set(value);
     this.position.set(value);
   }
 
   onMessageChange(value: string): void {
+      this.searchQuery.set(value);
     this.message.set(value);
   }
 

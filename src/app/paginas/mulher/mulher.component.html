@@ -16,23 +16,28 @@
     <div class="controls uk-card uk-card-default uk-card-body">
         <h3 style="color: fff;" class="uk-card-title"> Personalize o seu postal</h3>
 
-        <!-- Name Search Input -->
-        <div class="uk-margin">
-            <label style="color: fff;" class="uk-form-label" for="nameSearch">Nome</label>
-            <input class="uk-input" id="nameSearch" type="text" [ngModel]="name()"
-                (ngModelChange)="onNameSearchChange($event)" (focus)="showNameDropdown.set(true)"
-                (blur)="onNameInputBlur()" placeholder="Pesquise seu nome...">
+        <div class="search-container uk-position-relative" (keydown)="onKeyDown($event)">
+            <input class="uk-input" type="text" placeholder="Pesquise seu nome..." [value]="searchQuery() || ''"
+                (input)="onNameSearchChange($any($event.target).value)" />
+<p style="font-size: 0.8rem; color: #fff;"> Sua fotografia será adicionada automaticamente</p>
+            <!-- Dropdown -->
+            <div class="custom-dropdown" *ngIf="(searchQuery().length >= 2) && showNameDropdown()">
+                <div *ngIf="loading()" class="uk-text-center uk-padding-small">
+                    <div uk-spinner></div>
+                </div>
 
-            <!-- Search results dropdown -->
-            <div class="uk-dropdown" *ngIf="filteredNames().length > 0 && showNameDropdown()">
-                <ul class="uk-nav uk-dropdown-nav">
-                    <li *ngFor="let item of filteredNames()">
-                        <a href="#" (mousedown)="selectName(item)">{{ item.name }}</a>
+                <ul *ngIf="!loading() && filteredNames().length > 0">
+                    <li *ngFor="let item of filteredNames(); let i = index" [class.active]="i === activeIndex()"
+                        (mousedown)="selectName(item)">
+                        <span [innerHTML]="highlightMatch(item.name, searchQuery())"></span>
                     </li>
                 </ul>
+
+                <div *ngIf="!loading() && filteredNames().length === 0" class="no-results">
+                    Nenhum resultado encontrado
+                </div>
             </div>
         </div>
-
         <!-- Position Input -->
         <div class="uk-margin">
             <label style="color: fff;" class="uk-form-label" for="position">Posição</label>
@@ -90,7 +95,11 @@
                 <div class="profile-position">{{ position() }}</div>
             </div>
         </div>
+        
+
     </div>
+
+    
 </div>
 
 <app-menu></app-menu>
