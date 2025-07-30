@@ -1,12 +1,23 @@
+
+
 <div class="uk-container uk-margin">
     <div class="uk-grid-small uk-flex-center uk-text-center uk-margin-medium-top" uk-grid>
         <div class="uk-width-1-1">
             <img src="img/logo-mulher.png" alt="Logo" style="width: 400px; height: auto;">
         </div>
         <div class="uk-width-1-1">
-            <h3 style="color: #fff;" class="uk-text-lead uk-text-white">
-                Escreva a sua mensagem, faça o download e partilhe diretamente nas suas redes sociais.
-            </h3>
+            <h2 class="uk-padding" style="color: #fff; font-weight: 600;">Dia da Mulher Africana. Women in Tech Angola
+                Cables.</h2>
+
+            <p style="color: #fff;" class="uk-text-lead uk-text-white">
+                Celebramos com as nossas “Women in Tech” Angola Cables. Convidamos a partilhar uma frase, pensamento,
+                reflexão que reconheça e celebre o esforço, desenvolvimento, liderança e união e conquista das Mulheres
+                em todos os aspectos da Vida e no desenvolvimento tecnológico de Angola e do continente Africano, para o
+                qual contribuimos todos os dias.
+            </p>
+
+            <h2 class="uk-padding" style="color: #fff; font-weight: 600;">Eu sou nós porque nós somos Angola Cables.
+            </h2>
         </div>
     </div>
 </div>
@@ -19,7 +30,7 @@
         <div class="search-container uk-position-relative" (keydown)="onKeyDown($event)">
             <input class="uk-input" type="text" placeholder="Pesquise seu nome..." [value]="searchQuery() || ''"
                 (input)="onNameSearchChange($any($event.target).value)" />
-<p style="font-size: 0.8rem; color: #fff;"> Sua fotografia será adicionada automaticamente</p>
+            <p style="font-size: 0.8rem; color: #fff;"> Sua fotografia será adicionada automaticamente</p>
             <!-- Dropdown -->
             <div class="custom-dropdown" *ngIf="(searchQuery().length >= 2) && showNameDropdown()">
                 <div *ngIf="loading()" class="uk-text-center uk-padding-small">
@@ -69,7 +80,7 @@
         </div>
 
 
-<!-- 
+        <!-- 
         <h4 style="color:#fff;" class="uk-text-center">Partilhar </h4>
         <div class="uk-grid uk-grid-small uk-child-width-1-4@s uk-text-center" uk-grid>
             @for (platform of socialPlatforms; track platform) {
@@ -97,11 +108,11 @@
                 <div class="profile-position">{{ position() }}</div>
             </div>
         </div>
-        
+
 
     </div>
 
-    
+
 </div>
 
 <app-menu></app-menu>
