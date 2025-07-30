@@ -1,3 +1,6 @@
+<div style="background-image: url('');">
+
+</div>
 
 
 <div class="uk-container uk-margin">
@@ -10,19 +13,23 @@
                 Cables.</h2>
 
             <p style="color: #fff;" class="uk-text-lead uk-text-white">
-                Celebramos com as nossas “Women in Tech” Angola Cables. Convidamos a partilhar uma frase, pensamento,
+                Celebramos com as nossas “Women in Tech” Angola Cables. <br>Convidamos a partilhar uma frase,
+                pensamento,
                 reflexão que reconheça e celebre o esforço, desenvolvimento, liderança e união e conquista das Mulheres
                 em todos os aspectos da Vida e no desenvolvimento tecnológico de Angola e do continente Africano, para o
                 qual contribuimos todos os dias.
             </p>
 
-            <h2 class="uk-padding" style="color: #fff; font-weight: 600;">Eu sou nós porque nós somos Angola Cables.
+            <h2 class="uk-padding" style="color: #fff; font-weight: 600;">Eu sou, porque nós somos Angola Cables.
             </h2>
+
+
+
         </div>
     </div>
 </div>
 
-<div class="container uk-margin-large-bottom">
+<div class="container uk-margin-large-bottom ">
     <!-- Controls Section -->
     <div class="controls uk-card uk-card-default uk-card-body">
         <h3 style="color: fff;" class="uk-card-title"> Personalize o seu postal</h3>
@@ -49,12 +56,12 @@
                 </div>
             </div>
         </div>
-        <!-- Position Input -->
+        <!-- Position Input
         <div class="uk-margin">
             <label style="color: fff;" class="uk-form-label" for="position">Posição</label>
             <input class="uk-input" id="position" type="text" [ngModel]="position()"
                 (ngModelChange)="onPositionChange($event)" placeholder="Sua posição" />
-        </div>
+        </div> -->
 
         <!-- Message Textarea -->
         <div class="uk-margin">
@@ -64,20 +71,25 @@
         </div>
 
 
-        <div class="uk-grid-small uk-flex uk-flex-middle uk-flex-between" uk-grid>
+        <div class="uk-grid-small uk-flex uk-flex-middle uk-flex-between " uk-grid>
             <div class="uk-width-1-2">
                 <button class="uk-button uk-button-success uk-button-small uk-width-1-1"
                     (click)="downloadPostcard('png')">
-                    <span uk-icon="download"></span> PNG
+                    <span uk-icon="download"></span> Descarregar PNG
                 </button>
             </div>
             <div class="uk-width-1-2">
                 <button class="uk-button uk-button-success uk-button-small uk-width-1-1"
                     (click)="downloadPostcard('jpeg')">
-                    <span uk-icon="download"></span> JPG
+                    <span uk-icon="download"></span> Descarregar JPG
                 </button>
             </div>
         </div>
+
+        <p style="color: #fff; margin-top: 10px;">
+            Depois de descarregar a fotografia, poderá partilhar nas suas redes sociais mencionando Angola Cables
+            ( &#64;AngolaCables ).
+        </p>
 
 
         <!-- 
@@ -100,12 +112,12 @@
         <div #postcardRef id="postcard">
             <div class="postcard-header">Dia da Mulher Africana<br /> <img src="img/logo-mulher.png"></div>
             <img class="profile-photo" [src]="selectedPhoto()" alt="Profile Photo" />
+             <div class="profile-name">{{ name() }}</div>
             <div class="profile-info">
                 <div class="profile-message">
                     <p> {{ message() }} </p>
                 </div>
-                <div class="profile-name">{{ name() }}</div>
-                <div class="profile-position">{{ position() }}</div>
+               
             </div>
         </div>
 
