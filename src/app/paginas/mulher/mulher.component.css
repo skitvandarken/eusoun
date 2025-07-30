@@ -5,7 +5,8 @@
     max-width: 1200px;
     width: 100%;
     margin: 0 auto;
-    align-items: top;
+    align-items: center;
+    justify-content: center;
 }
 
 .uk-dropdown-nav {

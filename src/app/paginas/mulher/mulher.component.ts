@@ -144,7 +144,6 @@ export class MulherComponent {
   }
 
   onMessageChange(value: string): void {
-      this.searchQuery.set(value);
     this.message.set(value);
   }
 
