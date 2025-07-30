@@ -1,25 +1,24 @@
 <div class="uk-container uk-margin">
-    <div class="uk-grid-small uk-flex uk-flex-center uk-text-center" uk-grid>
+    <div class="uk-grid-small uk-flex-center uk-text-center uk-margin-medium-top" uk-grid>
         <div class="uk-width-1-1">
-            <img src="img/logo-mulher.png" alt="Logo" width="400" height="auto">
+            <img src="img/logo-mulher.png" alt="Logo" style="width: 400px; height: auto;">
         </div>
         <div class="uk-width-1-1">
-            <h3 style="color:white" class="uk-text-lead ">
+            <h3 style="color: #fff;" class="uk-text-lead uk-text-white">
                 Escreva a sua mensagem, faça o download ou partilhe diretamente nas suas redes sociais.
             </h3>
         </div>
     </div>
 </div>
 
-
 <div class="container uk-margin-large-bottom">
     <!-- Controls Section -->
     <div class="controls uk-card uk-card-default uk-card-body">
-        <h3 class="uk-card-title"> Personalize o seu postal</h3>
+        <h3 style="color: fff;" class="uk-card-title"> Personalize o seu postal</h3>
 
         <!-- Name Search Input -->
         <div class="uk-margin">
-            <label class="uk-form-label" for="nameSearch">Nome</label>
+            <label style="color: fff;" class="uk-form-label" for="nameSearch">Nome</label>
             <input class="uk-input" id="nameSearch" type="text" [ngModel]="name()"
                 (ngModelChange)="onNameSearchChange($event)" (focus)="showNameDropdown.set(true)"
                 (blur)="onNameInputBlur()" placeholder="Pesquise seu nome...">
@@ -36,35 +35,37 @@
 
         <!-- Position Input -->
         <div class="uk-margin">
-            <label class="uk-form-label" for="position">Posição</label>
+            <label style="color: fff;" class="uk-form-label" for="position">Posição</label>
             <input class="uk-input" id="position" type="text" [ngModel]="position()"
                 (ngModelChange)="onPositionChange($event)" placeholder="Sua posição" />
         </div>
 
         <!-- Message Textarea -->
         <div class="uk-margin">
-            <label class="uk-form-label" for="message">Mensagem</label>
-            <textarea class="uk-textarea" id="message" maxlength="150" rows="4" [ngModel]="message()"
+            <label style="color: fff;" class="uk-form-label" for="message">Mensagem</label>
+            <textarea class="uk-textarea" id="message" maxlength="150" rows="3" [ngModel]="message()"
                 (ngModelChange)="onMessageChange($event)" placeholder="Sua mensagem inspiradora"></textarea>
         </div>
 
 
-        <div class="uk-margin uk-grid-small uk-child-expand@s uk-text-center" uk-grid>
-            <div>
-                <button class="uk-button uk-button-success uk-width-1-1 uk-margin-small-bottom"
+        <div class="uk-grid-small uk-flex uk-flex-middle uk-flex-between" uk-grid>
+            <div class="uk-width-1-2">
+                <button class="uk-button uk-button-success uk-button-small uk-width-1-1"
                     (click)="downloadPostcard('png')">
                     <span uk-icon="download"></span> PNG
                 </button>
             </div>
-            <div>
-                <button class="uk-button uk-button-secondary uk-width-1-1" (click)="downloadPostcard('jpeg')">
+            <div class="uk-width-1-2">
+                <button class="uk-button uk-button-success uk-button-small uk-width-1-1"
+                    (click)="downloadPostcard('jpeg')">
                     <span uk-icon="download"></span> JPG
                 </button>
             </div>
         </div>
 
 
-        <h4 class="uk-text-center">Partilhar </h4>
+
+        <h4 style="color:#fff;" class="uk-text-center">Partilhar </h4>
         <div class="uk-grid uk-grid-small uk-child-width-1-4@s uk-text-center" uk-grid>
             @for (platform of socialPlatforms; track platform) {
             <div>
