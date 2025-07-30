@@ -5,7 +5,7 @@ import { FooterComponent } from '../layout/footer/footer.component';
 @Component({
   selector: 'app-inicio',
   imports: [
-    MenuComponent,FooterComponent
+    MenuComponent
     
 ],
   templateUrl: './inicio.component.html',
