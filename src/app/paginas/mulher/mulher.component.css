@@ -7,8 +7,8 @@
     margin: 0 auto;
     align-items: center;
     justify-content: center;
- 
-    
+
+
 }
 
 .uk-dropdown-nav {
@@ -16,53 +16,61 @@
 }
 
 .custom-dropdown {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
-  background: #fff;
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
-  margin-top: 4px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  overflow: hidden;
-  max-height: 250px;
-  overflow-y: auto;
-  animation: fadeIn 0.15s ease-in-out;
-  z-index: 1000;
-  color: #000;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    margin-top: 4px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    max-height: 250px;
+    overflow-y: auto;
+    animation: fadeIn 0.15s ease-in-out;
+    z-index: 1000;
+    color: #000;
 }
 
 .custom-dropdown ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .custom-dropdown li {
-  padding: 8px 12px;
-  cursor: pointer;
-  transition: background 0.2s;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background 0.2s;
 }
 
 .custom-dropdown li:hover,
 .custom-dropdown li.active {
-  background: #f5f5f5;
+    background: #f5f5f5;
 }
 
 .custom-dropdown strong {
-  color: #1e87f0; /* UIkit primary */
+    color: #1e87f0;
+    /* UIkit primary */
 }
 
 .no-results {
-  text-align: center;
-  padding: 8px;
-  color: #999;
+    text-align: center;
+    padding: 8px;
+    color: #999;
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-5px); }
-  to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .controls {
@@ -87,6 +95,8 @@
     border-radius: 12px;
     width: 100%;
     max-width: 600px;
+
+
 }
 
 #postcard {
@@ -108,7 +118,35 @@
     text-align: center;
 }
 
+.glassmorphic-box {
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
+    animation: floatGlass 12s cubic-bezier(0.65, 0.05, 0.36, 1) infinite;
+    transition: all 0.3s ease-in-out;
+    transform-style: preserve-3d;
+    perspective: 1000px;
 
+    background-position: center;
+    background-size: cover;
+    background-image: url('/img/bg-africa-2.png');
+    background-repeat: no-repeat;
+    background-color: rgba(6, 0, 53, 0.782);
+    background-blend-mode: darken;
+}
+
+.bg-africa {
+    background-position: center;
+    background-size: cover;
+    background-image: url('/img/bg-africa-2.png');
+    background-repeat: no-repeat;
+    background-color: rgba(0, 13, 57, 0.782);
+    background-blend-mode: darken;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
+
+
+}
 
 .postcard-header {
     font-size: 12px;
@@ -209,9 +247,10 @@
 }
 
 
-.uk-card-title{
+.uk-card-title {
     color: #fff;
 }
+
 .uk-button-social {
     background-color: #1DA1F2;
     /* Twitter blue */
