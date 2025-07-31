@@ -28,7 +28,6 @@ export class MulherComponent {
     { name: 'Ana Virginia Oliveira P. Sales Ferreira', photo: 'img/mulheres/enhaced/anavirjinia-Picsart-AiImageEnhancer.jpg' },
     { name: 'Andrea de Oliveira Brito', photo: 'img/mulheres/enhaced/andrea-Picsart-AiImageEnhancer.jpg' },
     { name: 'Ariete Pereira', photo: 'img/mulheres/enhaced/ariete-Picsart-AiImageEnhancer.jpg' },
-    { name: 'Beatriz Jordão', photo: 'img/mulheres/enhaced/beatrizjd.jpg' },
     { name: 'Brigida Fortunato', photo: 'img/mulheres/enhaced/brigida-Picsart-AiImageEnhancer.jpg' },
     { name: 'Bruna Lassakowski Fontes', photo: 'img/mulheres/enhaced/bruna-Picsart-AiImageEnhancer.jpg' },
     { name: 'Celma Paulo', photo: 'img/mulheres/enhaced/celma-Picsart-AiImageEnhancer.jpg' },
