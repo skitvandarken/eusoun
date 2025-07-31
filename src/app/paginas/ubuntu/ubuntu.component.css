@@ -5,6 +5,19 @@
     min-height: 100vh;
 }
 
+.bg-africa {
+    background-position: center;
+    background-size: cover;
+    background-image: url('/img/bg-africa-2.png');
+    background-repeat: no-repeat;
+    background-color: rgba(0, 13, 57, 0.782);
+    background-blend-mode: darken;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
+
+
+}
+
+
 .fundo-cartoes{
     background: linear-gradient(45deg, rgba(0, 24, 61), rgba(0, 97, 187), rgba(0, 42, 81)) !important;
 }
