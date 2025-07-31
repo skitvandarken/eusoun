@@ -18,7 +18,7 @@ export class MulherComponent {
   // Hardcoded names list (sorted alphabetically)
   readonly allNames = [
     { name: 'Aida Pascoal', photo: 'img/mulheres/enhaced/aidapascual-Picsart-AiImageEnhancer.jpg' },
-    { name: 'Defesa Manuel', photo: 'img/mulheres/enhaced/defesa-Picsart-AiImageEnhancer.jpg.jpg' },
+    { name: 'Defesa Manuel', photo: 'img/mulheres/enhaced/defesa-Picsart-AiImageEnhancer.jpg' },
     { name: 'Djamila Caetano', photo: 'img/mulheres/enhaced/djamilac-Picsart-AiImageEnhancer.jpg' },
     { name: 'Graciete Brandão', photo: 'img/mulheres/enhaced/graciete-Picsart-AiImageEnhancer.jpg' },
     { name: 'Vita Ngombo', photo: 'img/mulheres/enhaced/vita-Picsart-AiImageEnhancer.jpg' },
