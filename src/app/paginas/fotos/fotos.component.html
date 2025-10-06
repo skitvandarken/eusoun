@@ -15,9 +15,22 @@
 
     <!-- Grid Layout for Albums -->
     <div
-      class="uk-grid uk-child-width-1-4@m uk-child-width-1-2@s uk-child-width-1-1 uk-text-center uk-margin-large-bottom"
+      class="uk-grid uk-child-width-1-3@m uk-grid-small uk-child-width-1-1@s uk-child-width-1-1 uk-margin-large-bottom uk-text-center"
       uk-grid>
       <!-- Album 1 -->
+
+
+           <div>
+        <div class="uk-card  uk-card-body uk-transition-toggle" uk-tooltip="" aria-label="">
+          <img class="hover uk-border-rounded" src="img/capa-gala.png" alt="Image 1" uk-toggle="target: #modal-galax">
+          <!-- Lightbox Link for Image Preview -->
+          <button class="uk-button uk-button-primary uk-border-pill uk-margin-top" uk-toggle="target: #modal-galax">
+            Ver Fotos
+          </button>
+        </div>
+      </div>
+
+
       <div>
         <div class="uk-card  uk-card-body uk-transition-toggle" uk-tooltip="" aria-label="">
           <img class="hover uk-border-rounded" src="img/capa-gala.png" alt="Image 1" uk-toggle="target: #modal-galax">
@@ -395,7 +408,7 @@
     <div class="uk-slideshow" uk-slideshow=" animation: slide ">
       <ul class="uk-slideshow-items">
         <li>
-          <img src="img/gala/out-_D9A0169.jpg">
+          <img height="300px" width="100%" src="img/gala/out-_D9A0169.jpg" >
         </li>
         <li>
           <img src="img/gala/out-_D9A0233.jpg" />

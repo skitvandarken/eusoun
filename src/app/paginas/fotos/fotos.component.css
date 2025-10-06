@@ -39,3 +39,14 @@
     background: linear-gradient(45deg, rgba(0, 24, 61), rgba(0, 97, 187), rgba(0, 42, 81));
 
 }
+
+
+.uk-modal:not(.uk-open) {
+  display: none !important;
+}
+
+.uk-modal-full {
+  position: fixed;
+  top: 0;
+  left: 0;
+}

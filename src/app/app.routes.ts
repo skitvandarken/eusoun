@@ -7,6 +7,7 @@ import { DesejosComponent } from './layout/desejos/desejos.component';
 import { UbuntuComponent } from './paginas/ubuntu/ubuntu.component';
 import { TesteComponent } from './paginas/teste/teste.component';
 import { MulherComponent } from './paginas/mulher/mulher.component';
+import { FotosSemanadaeticaComponent } from './layout/fotos-semanadaetica/fotos-semanadaetica.component';
 
 export const routes: Routes = [
     { path: '', component: InicioComponent },
@@ -17,6 +18,7 @@ export const routes: Routes = [
     { path: 'ubuntu', component: UbuntuComponent },
     { path: 'teste', component: TesteComponent },
     { path: 'mulher', component: MulherComponent },
+    {path: 'semana-da-etica', component: FotosSemanadaeticaComponent}
 
 
 

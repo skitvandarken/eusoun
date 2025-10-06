@@ -1,0 +1,116 @@
+<app-menu></app-menu>
+<div class="uk-grid-small uk-flex-center uk-text-center " uk-grid>
+    <div  class="uk-width-1-1 bg-africa">
+       <a routerLink="/"> <img class="uk-padding" src="/img/logo-eusou-branco.png" alt="Logo" style="width: 400px; height: auto;"></a>
+    </div>
+</div>
+
+<div class="fundo">
+
+    <div class="uk-container uk-text-center uk-margin-small-bottom uk-margin-medium-top">
+        <h1 class="texto"> Semana da Ética </h1>
+        <p class="texto"> Setembro, 2025</p>
+    </div>
+
+
+
+
+    <!-- Container for the photo albums -->
+    <div class="uk-container ">
+
+        <!-- Grid Layout for Albums -->
+        <div class="uk-grid uk-child-width-1-1@m uk-grid-small uk-child-width-1-1@s uk-child-width-1-1 uk-margin-large-bottom uk-text-center"
+            uk-grid>
+            <!-- Album 1 -->
+
+            <div>
+                <div class="uk-card uk-card-body uk-transition-toggle" uk-tooltip="" aria-label="">
+                    <div class="uk-inline uk-display-block">
+                        <img style="filter: brightness(0.5);" class="hover uk-border-rounded" src="img/semana-da-etica/img3.jpg" alt="Image 1"
+                            uk-toggle="target: #modal-sangano">
+                        <!-- Botão posicionado por cima da imagem -->
+                        <div class="uk-position-center">
+                            <button class="uk-button uk-button-large uk-button-primary uk-border-pill"
+                                uk-toggle="target: #modal-sangano">
+                                Ver Fotos
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+            <!-- Add more albums as needed -->
+        </div>
+
+        <!-- Modal for Viewing Full Album -->
+
+
+        <div class="uk-modal-full" id="modal-sangano" uk-modal>
+            <div class="uk-modal-dialog glass-effect uk-modal-body">
+                <button class="uk-modal-close-full" type="button" uk-close></button>
+                <div class="uk-slideshow" uk-slideshow="animation: slide;">
+                    <ul class="uk-slideshow-items">
+                        <li>
+                            <img src="img/semana-da-etica/img3.jpg" alt="Album 1 Image 1" />
+                        </li>
+                        <li>
+                            <img src="img/semana-da-etica/img4.jpg" alt="Album 1 Image 2" />
+                        </li>
+                        <li>
+                            <img src="img/semana-da-etica/img5.jpg" alt="Album 1 Image 3" />
+                        </li>
+                        <li>
+                            <img src="img/semana-da-etica/img6.jpg" alt="Album 1 Image 4" />
+                        </li>
+                        <li>
+                            <img src="img/semana-da-etica/img7.jpg" alt="Album 1 Image 5" />
+                        </li>
+                        <li>
+                            <img src="img/semana-da-etica/img8.jpg" alt="Album 1 Image 6" />
+                        </li>
+                        <li>
+                            <img src="img/semana-da-etica/img9.jpg" alt="Album 1 Image 7" />
+                        </li>
+                        <li>
+                            <img src="img/semana-da-etica/img10.jpg" alt="Album 1 Image 8" />
+                        </li>
+                        <li>
+                            <img src="img/semana-da-etica/img11.jpg" alt="Album 1 Image 9" />
+                        </li>
+                        <li>
+                            <img src="img/semana-da-etica/img12.jpg" alt="Album 1 Image 10" />
+                        </li>
+                        <li>
+                            <img src="img/semana-da-etica/img13.jpg" alt="Album 1 Image 11" />
+                        </li>
+                        <li>
+                            <img src="img/semana-da-etica/img14.jpg" alt="Album 1 Image 12" />
+                        </li>
+                        <li>
+                            <img src="img/semana-da-etica/img15.jpg" alt="Album 1 Image 13" />
+                        </li>
+                        <li>
+                            <img src="img/semana-da-etica/img16.jpg" alt="Album 1 Image 14" />
+                        </li>
+
+                    </ul>
+
+                    <!-- Navigation -->
+                    <a style="color: white" class="uk-slidenav-large uk-position-center-left uk-position-small" href="#"
+                        uk-slidenav-previous uk-slideshow-item="previous"></a>
+                    <a style="color: white" class="uk-slidenav-large uk-position-center-right uk-position-small"
+                        href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
