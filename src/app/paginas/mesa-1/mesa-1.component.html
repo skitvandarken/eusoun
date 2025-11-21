@@ -1,0 +1,95 @@
+<app-menu></app-menu>
+<div class="uk-grid-small uk-flex-center uk-text-center " uk-grid>
+  <div class="uk-width-1-1 bg-africa">
+    <a routerLink="/"> <img class="uk-padding" src="/img/logo-eusou-branco.png" alt="Logo"
+        style="width: 400px; height: auto;"></a>
+  </div>
+</div>
+
+<div class="uk-container uk-text-center uk-margin-small-bottom uk-margin-medium-top">
+
+  <h1 style="color:white"> Todos Contribuímos </h1>
+</div>
+
+
+
+<div style="border-radius: 20px; "
+  class="uk-container uk-text-center uk-flex uk-flex-center uk-flex-middle uk-margin-large-top uk-margin-large-bottom ">
+  <div style="border-radius: 20px; margin-bottom: 20px; " class="uk-width-1-2@m uk-card uk-card-default uk-card-body">
+
+    <!-- FORMULÁRIO -->
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+
+
+      <!-- NÚMERO DA MESA -->
+      <div class="uk-margin">
+      <h4 class="uk-margin-medium-top">Mesa nº:</h4>
+        <div class="uk-form-controls">
+          <input class="uk-input" type="number" formControlName="numeroMesa" placeholder="Ex: 1">
+        </div>
+      </div>
+
+          <p>Submeta as conclusões da vossa mesa</p>
+
+      <!-- Grupo: Motivar -->
+      <h4 class="uk-margin-medium-top">Para Motivar é necessário:</h4>
+
+      <div formGroupName="motivar" class="uk-grid-small" uk-grid>
+        <div class="uk-width-1-1">
+          <input class="uk-input" type="text" formControlName="acao1" placeholder="Ação 1 para motivar" />
+        </div>
+
+        <div class="uk-width-1-1">
+          <input class="uk-input" type="text" formControlName="acao2" placeholder="Ação 2 para motivar" />
+        </div>
+
+        <div class="uk-width-1-1">
+          <input class="uk-input" type="text" formControlName="acao3" placeholder="Ação 3 para motivar" />
+        </div>
+      </div>
+
+      <!-- Grupo: Crescer -->
+      <h4 class="uk-margin-medium-top">Para Crescer é necessário:</h4>
+
+      <div formGroupName="crescer" class="uk-grid-small" uk-grid>
+        <div class="uk-width-1-1">
+          <input class="uk-input" type="text" formControlName="acao1" placeholder="Ação 1 para crescer" />
+        </div>
+
+        <div class="uk-width-1-1">
+          <input class="uk-input" type="text" formControlName="acao2" placeholder="Ação 2 para crescer" />
+        </div>
+
+        <div class="uk-width-1-1">
+          <input class="uk-input" type="text" formControlName="acao3" placeholder="Ação 3 para crescer" />
+        </div>
+      </div>
+
+      <!-- Grupo: Inovar -->
+      <h4 class="uk-margin-medium-top">Para Inovar é Necessário:</h4>
+
+      <div formGroupName="inovar" class="uk-grid-small" uk-grid>
+        <div class="uk-width-1-1">
+          <input class="uk-input" type="text" formControlName="acao1" placeholder="Ação 1 para inovar" />
+        </div>
+
+        <div class="uk-width-1-1">
+          <input class="uk-input" type="text" formControlName="acao2" placeholder="Ação 2 para inovar" />
+        </div>
+
+        <div class="uk-width-1-1">
+          <input class="uk-input" type="text" formControlName="acao3" placeholder="Ação 3 para inovar" />
+        </div>
+      </div>
+
+      <!-- BOTÃO -->
+      <div class="uk-margin-large-top">
+        <button style="border-radius: 20px" class="uk-button uk-button-primary uk-width-1-1" type="submit"
+          [disabled]="form.invalid">
+          Submeter respostas
+        </button>
+      </div>
+
+    </form>
+  </div>
+</div>

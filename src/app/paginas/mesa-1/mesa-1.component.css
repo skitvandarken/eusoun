@@ -1,0 +1,78 @@
+.uk-card-body {
+  border: 1px, solid, white !important;
+
+
+  /* Glass effect */
+  background: rgba(255, 255, 255, 0.08) !important;
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  /* Borda translúcida */
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  /* Sombra base */
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.2);
+
+  /* Animação */
+  animation: neonPulse 4s infinite alternate ease-in-out;
+
+  /* Transição suave hover */
+  transition: all 0.5s ease;
+}
+
+/* Neon mais forte ao passar o mouse */
+.uk-card-body:hover {
+  box-shadow:
+    0 0 25px rgba(0, 255, 255, 0.6),
+    0 0 60px rgba(150, 0, 255, 0.5),
+    0 0 120px rgba(0, 255, 255, 0.4);
+
+  transform: scale(1.01);
+}
+
+/* Animação pulsante suave */
+@keyframes neonPulse {
+  0% {
+    box-shadow:
+      0 0 15px rgba(0, 255, 255, 0.3),
+      inset 0 0 10px rgba(255, 255, 255, 0.05);
+  }
+
+  50% {
+    box-shadow:
+      0 0 30px rgba(150, 0, 255, 0.4),
+      inset 0 0 15px rgba(255, 255, 255, 0.1);
+  }
+
+  100% {
+    box-shadow:
+      0 0 50px rgba(0, 255, 255, 0.6),
+      inset 0 0 20px rgba(255, 255, 255, 0.15);
+  }
+}
+
+/* Inputs em estilo glass também */
+.uk-input {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.827);
+  color: white !important;
+  border-radius: 12px;
+  transition: 0.3s ease;
+}
+
+.uk-input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.uk-input:focus {
+  border-color: cyan;
+  box-shadow: 0 0 15px cyan;
+  background: rgba(255, 255, 255, 0.08) !important;
+}
+
+/* Títulos claros no glass */
+.uk-card-title,
+h4,
+p {
+  color: white !important;
+}
