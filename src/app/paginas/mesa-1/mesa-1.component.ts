@@ -4,6 +4,10 @@ import { MenuComponent } from '../../layout/menu/menu.component';
 import { FormsModule, FormBuilder, FormGroup, Validators, ReactiveFormsModule } from "@angular/forms";
 import { CommonModule } from '@angular/common';
 
+
+declare var UIkit: any;
+
+
 @Component({
   selector: 'app-mesa-1',
   imports: [
@@ -29,53 +33,61 @@ constructor(
   numeroMesa: ['', Validators.required],
 
   motivar: this.fb.group({
-    acao1: ['', Validators.required],
-    acao2: ['', Validators.required],
-    acao3: ['', Validators.required]
+    acao1: ['', [Validators.required, Validators.maxLength(60)]],
+    acao2: ['', [Validators.required, Validators.maxLength(60)]],
+    acao3: ['', [Validators.required, Validators.maxLength(60)]]
   }),
 
   crescer: this.fb.group({
-    acao1: ['', Validators.required],
-    acao2: ['', Validators.required],
-    acao3: ['', Validators.required]
+    acao1: ['', [Validators.required, Validators.maxLength(60)]],
+    acao2: ['', [Validators.required, Validators.maxLength(60)]],
+    acao3: ['', [Validators.required, Validators.maxLength(60)]],
   }),
 
   inovar: this.fb.group({
-    acao1: ['', Validators.required],
-    acao2: ['', Validators.required],
-    acao3: ['', Validators.required]
+    acao1: ['', [Validators.required, Validators.maxLength(60)]],
+    acao2: ['', [Validators.required, Validators.maxLength(60)]],
+    acao3: ['', [Validators.required, Validators.maxLength(60)]]
   })
 });
 
   }
 
+
+  loading: boolean = false;
+
  async onSubmit() {
 
   if (this.form.valid) {
+
+    this.loading = true; // LIGA SPINNER
 
     try {
 
       await this.mesaService.enviarMesa(this.form.value);
 
-      alert(`Mesa ${this.form.value.numeroMesa} enviada com sucesso!`);
+      this.loading = false; // DESLIGA
+
+      UIkit.modal('#modalSuccess').show();
 
       this.form.reset();
 
     } catch (error) {
 
+      this.loading = false; // DESLIGA
+
       console.error(error);
 
-      alert('Erro ao enviar dados');
-
+      UIkit.modal('#modalError').show();
     }
 
   } else {
 
     this.form.markAllAsTouched();
     alert('Preencha todos os campos');
-    
   }
 }
+
 
 
 }

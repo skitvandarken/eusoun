@@ -11,15 +11,18 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('/img/semana-da-etica/img15.jpg');
+  background: url('/img/background-eu.png');
+  background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  filter: brightness(20%);
-  z-index: 0; /* atrás do conteúdo */
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+  /* atrás do conteúdo */
 }
 
 /* conteúdo da div fica acima da camada */
-.fundo-contribuicao > .uk-container {
+.fundo-contribuicao>.uk-container {
   position: relative;
   z-index: 1;
 }

@@ -19,11 +19,11 @@
 }
 
 .uk-navbar-container {
-    z-index: 1000; /* Ensure it overlays other elements */
+    z-index: 1000; /* Ensure it over lays other elements */
     position: fixed;
     bottom: 0;
     width: 100%;
-    background-color: #fff; /* Background color for the navbar */
+    background: linear-gradient( 115deg, #0089c0, #648c00);; /* Background color for the navbar */
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for better visibility */
     display: flex;
     justify-content: center;
@@ -47,4 +47,15 @@
     background-color: #fff; /* Background color for the offcanvas bar */
 }
 
+.uk-button-primary{
+    background-color: #fff;
+    color: #002460;
+    
+    font-weight: bold;
 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.uk-navbar-toggle{
+    color: #fff;
+}
