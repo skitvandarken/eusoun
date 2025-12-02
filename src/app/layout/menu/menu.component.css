@@ -18,6 +18,12 @@
     min-height: 100vh;
 }
 
+
+.fundo-card{
+        background: linear-gradient( 115deg, #0089c0, #648c00);; /* Background color for the navbar */
+        color: white;
+}
+
 .uk-navbar-container {
     z-index: 1000; /* Ensure it over lays other elements */
     position: fixed;
