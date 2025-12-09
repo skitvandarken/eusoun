@@ -4,12 +4,14 @@ import { MesaService } from '../../services/mesa.service';
 
 import { FormsModule, FormBuilder, FormGroup, Validators, ReactiveFormsModule } from "@angular/forms";
 import { MenuComponent } from '../../layout/menu/menu.component';
+import { RouterLink } from '@angular/router';
+
 
 declare var UIkit: any;
 
 @Component({
   selector: 'app-tables',
-  imports: [ FormsModule, CommonModule, MenuComponent, ReactiveFormsModule ],
+  imports: [ FormsModule, CommonModule, MenuComponent, RouterLink, ReactiveFormsModule,  ],
   templateUrl: './tables.component.html',
   styleUrl: './tables.component.css'
 })
