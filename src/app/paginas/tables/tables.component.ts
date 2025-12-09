@@ -1,27 +1,19 @@
+import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { MesaService } from '../../services/mesa.service';
-import { MenuComponent } from '../../layout/menu/menu.component';
-import { FormsModule, FormBuilder, FormGroup, Validators, ReactiveFormsModule } from "@angular/forms";
-import { CommonModule } from '@angular/common';
-import { RouterLink } from '@angular/router';
 
+import { FormsModule, FormBuilder, FormGroup, Validators, ReactiveFormsModule } from "@angular/forms";
+import { MenuComponent } from '../../layout/menu/menu.component';
 
 declare var UIkit: any;
 
-
 @Component({
-  selector: 'app-mesa-1',
-  imports: [
-    MenuComponent,
-    FormsModule, 
-    CommonModule, 
-    ReactiveFormsModule,
-    RouterLink
-],
-  templateUrl: './mesa-1.component.html',
-  styleUrl: './mesa-1.component.css'
+  selector: 'app-tables',
+  imports: [ FormsModule, CommonModule, MenuComponent, ReactiveFormsModule ],
+  templateUrl: './tables.component.html',
+  styleUrl: './tables.component.css'
 })
-export class Mesa1Component implements OnInit {
+export class TablesComponent implements OnInit {
 
   form!: FormGroup;
   

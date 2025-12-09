@@ -10,6 +10,7 @@ import { MulherComponent } from './paginas/mulher/mulher.component';
 import { FotosSemanadaeticaComponent } from './layout/fotos-semanadaetica/fotos-semanadaetica.component';
 import { Mesa1Component } from './paginas/mesa-1/mesa-1.component';
 import { ContribuicaoComponent } from './paginas/contribuicao/contribuicao.component';
+import { TablesComponent } from './paginas/tables/tables.component';
 
 export const routes: Routes = [
   { path: '', component: InicioComponent },
@@ -22,5 +23,6 @@ export const routes: Routes = [
   { path: 'mulher', component: MulherComponent },
   { path: 'semana-da-etica', component: FotosSemanadaeticaComponent },
   { path: 'mesas', component: Mesa1Component },
-  { path: 'contribuicoes', component: ContribuicaoComponent }
+  { path: 'contribuicoes', component: ContribuicaoComponent },
+  { path: 'tables', component: TablesComponent}
 ];
