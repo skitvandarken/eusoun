@@ -23,8 +23,5 @@ export const routes: Routes = [
   { path: 'teste', component: TesteComponent },
   { path: 'mulher', component: MulherComponent },
   { path: 'semana-da-etica', component: FotosSemanadaeticaComponent },
-  { path: 'mesas', component: Mesa1Component },
-  { path: 'contribuicoes', component: ContribuicaoComponent },
-  { path: 'tables', component: TablesComponent},
-  { path: 'contributions', component: ContribuitionsComponent }
+
 ];
