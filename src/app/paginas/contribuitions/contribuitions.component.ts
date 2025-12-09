@@ -15,14 +15,14 @@ import { Firestore, collection, addDoc } from '@angular/fire/firestore';
 import { PlanoAccaoService } from '../../services/plano-accao.service';
 import { RouterLink } from '@angular/router';
 
+
 @Component({
-  selector: 'app-contribuicao',
-  standalone: true,
-  imports: [MenuComponent, CommonModule, RouterLink, FormsModule],
-  templateUrl: './contribuicao.component.html',
-  styleUrls: ['./contribuicao.component.css'],
+  selector: 'app-contribuitions',
+  imports: [MenuComponent, CommonModule, FormsModule, RouterLink],
+  templateUrl: './contribuitions.component.html',
+  styleUrl: './contribuitions.component.css'
 })
-export class ContribuicaoComponent implements OnInit, OnDestroy {
+export class ContribuitionsComponent implements OnInit, OnDestroy {
 
   mesas: any[] = [];
   loading = true;

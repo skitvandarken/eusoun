@@ -1,0 +1,192 @@
+<app-menu></app-menu>
+
+<div class="fundo-contribuicao">
+    <div class="uk-grid-small uk-flex-center uk-text-center" uk-grid>
+        <div class="uk-width-1-1 bg-africa">
+            <a routerLink="/">
+                <img class="uk-padding" src="/img/logo-eusou-branco-2.png" alt="Logo"
+                    style="width: 400px; height: auto;">
+            </a>
+
+        </div>
+        <a routerLink="/contribuicoes"><button style="  background: linear-gradient(to right, #05B1CB, #93C516);
+" class="uk-button-secondary uk-button uk-border-rounded "> > PORTUGUÊS</button></a>
+
+    </div>
+
+    <div class="uk-container uk-text-center uk-margin-small-bottom uk-margin-medium-top">
+        <h1 style="color: #002561">We All Contribute</h1>
+    </div>
+
+    <div class="uk-section uk-margin-large-bottom">
+        <div class="uk-container">
+
+            <!-- LOADING MESAS -->
+            <div *ngIf="loading" class="uk-text-center uk-margin-large">
+                <div uk-spinner></div>
+                <p>Loading contributions...</p>
+            </div>
+
+            <ul class="uk-subnav uk-subnav-pill" uk-switcher>
+                <li><a>Results</a></li>
+                <li><a>Action Plan</a></li>
+                <li><a>Final Document</a></li>
+            </ul>
+
+            <div class="uk-switcher uk-margin">
+
+                <!-- ================== RESULTS ================== -->
+                <div>
+                    <div class="uk-child-width-1-2@m uk-child-width-1-4@l uk-grid-match" uk-grid *ngIf="!loading">
+                        <div *ngFor="let mesa of mesas">
+                            <div class="uk-card uk-card-default uk-card-body uk-border-rounded uk-box-shadow-medium">
+                                <div class="uk-flex uk-flex-between uk-flex-middle">
+                                    <h3 style="color:#002561">Table {{ mesa.numeroMesa || mesa.mesa }}</h3>
+                                </div>
+                                <span class="uk-label uk-label-primary">{{ mesa.createdAt?.toDate() | date:'short'
+                                    }}</span>
+
+                                <div *ngFor="let categoria of ['Motivar','Crescer','Inovar']" class="uk-margin">
+                                    <h5 class="uk-text-bold" style="color:#002561">
+                                        {{
+                                        categoria === 'Motivar' ? 'Motivate' :
+                                        categoria === 'Crescer' ? 'Grow' :
+                                        'Innovate'
+                                        }}
+                                    </h5>
+
+                                    <ul class="uk-list ">
+                                        <li *ngFor="let acao of getAcoesArray(mesa, categoria)">
+                                            <strong>{{ acao }}</strong>
+                                            <input type="checkbox" class="uk-checkbox uk-margin-left"
+                                                [checked]="isSelected(mesa, categoria, acao)"
+                                                (change)="toggleAcao(mesa, categoria, acao)" [ngClass]="{
+                          'categoria-motivar': categoria==='Motivar' && isSelected(mesa,categoria,acao),
+                          'categoria-crescer': categoria==='Crescer' && isSelected(mesa,categoria,acao),
+                          'categoria-inovar': categoria==='Inovar' && isSelected(mesa,categoria,acao)
+                        }">
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ================== ACTION PLAN ================== -->
+                <div class="uk-container uk-margin-top">
+
+                    <!-- No actions selected -->
+                    <div *ngIf="selectedAcoes.length === 0" class="uk-text-center uk-margin-large uk-padding">
+                        <p style="color: #000;">No actions selected yet.</p>
+                    </div>
+
+                    <div *ngIf="selectedAcoes.length > 0" class="uk-grid-small" uk-grid>
+
+                        <!-- List of selected actions -->
+                        <div class="uk-width-1-2@m">
+                            <p class="uk-text-bold" style="color:#000">Selected Actions</p>
+
+                            <ul class="uk-list uk-list-striped">
+                                <li *ngFor="let categoria of ['Motivar','Crescer','Inovar']">
+                                    <strong>
+                                        {{
+                                        categoria === 'Motivar' ? 'Motivate' :
+                                        categoria === 'Crescer' ? 'Grow' :
+                                        'Innovate'
+                                        }}:
+                                    </strong>
+
+                                    <ul>
+                                        <li *ngFor="let acao of getAcoesByCategoria(categoria)" [ngClass]="{
+                          'categoria-motivar': categoria==='Motivar',
+                          'categoria-crescer': categoria==='Crescer',
+                          'categoria-inovar': categoria==='Inovar'
+                        }">
+                                            <span
+                                                style="color:#000; font-size: 1.5rem; font-weight: 700; margin-left:10px">
+                                                {{ acao.acao }}
+                                            </span>
+                                        </li>
+
+                                        <li *ngIf="getAcoesByCategoria(categoria).length === 0">
+                                            <span style="color:#000">No action selected</span>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Action plan inputs -->
+                        <div class="uk-width-1-2@m" style="margin-top:5px">
+                            <div *ngFor="let categoria of ['Motivar','Crescer','Inovar']" class="uk-margin">
+
+                                <h5 class="uk-text-bold">
+                                    {{
+                                    categoria === 'Motivar' ? 'Motivate' :
+                                    categoria === 'Crescer' ? 'Grow' :
+                                    'Innovate'
+                                    }}
+                                </h5>
+
+                                <textarea class="uk-textarea uk-margin-small-bottom" rows="5"
+                                    style="border-radius: 20px;"
+                                    placeholder="Describe the action plan for this category..."
+                                    [(ngModel)]="planosAcaoInputs[categoria]">
+                </textarea>
+                            </div>
+
+                            <div class="uk-margin-top uk-text-left">
+                                <button class="uk-button uk-button-primary botao" (click)="enviarParaFirebase()">
+                                    Save Action Plan
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- ================== SUBMITTED PLANS ================== -->
+                <div class="uk-container uk-margin-top">
+
+                    <div *ngIf="loadingPlanos" class="uk-text-center uk-margin-large">
+                        <div uk-spinner></div>
+                        <p>Loading submitted plans...</p>
+                    </div>
+
+                    <div *ngIf="!loadingPlanos && planosSubmetidos.length === 0" class="uk-text-center uk-margin-large">
+                        <p style="color: #000;">No action plans submitted yet.</p>
+                    </div>
+
+                    <div class="uk-child-width-1-2@m uk-grid-small" uk-grid *ngIf="planosSubmetidos.length > 0">
+                        <div *ngFor="let item of planosSubmetidos">
+                            <div class="uk-card uk-card-default uk-card-body uk-border-rounded">
+                                <h4 class="uk-text-bold" style="color:#002561">
+                                    Submitted on: {{ item.dataEnvio?.toDate() | date:'short' }}
+                                </h4>
+                                <hr>
+
+                                <div *ngFor="let acao of item.acoes">
+                                    <p class="uk-margin">
+                                        <strong>Category:</strong> {{ acao.categoria }}<br>
+                                        <strong>Action:</strong> {{ acao.acao }}
+                                    </p>
+
+                                    <p style="white-space: pre-line">
+                                        <strong>Action plan:</strong><br>
+                                        {{ acao.planosAcao || '—' }}
+                                    </p>
+
+                                    <hr>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

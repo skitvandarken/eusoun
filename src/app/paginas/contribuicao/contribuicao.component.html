@@ -7,6 +7,8 @@
         <img class="uk-padding" src="/img/logo-eusou-branco-2.png" alt="Logo" style="width: 400px; height: auto;">
       </a>
     </div>
+    <a routerLink="/contributions"><button style="  background: linear-gradient(to right, #05B1CB, #93C516);
+" class="uk-button-secondary uk-button uk-border-rounded "> > ENGLISH</button></a>
   </div>
 
   <div class="uk-container uk-text-center uk-margin-small-bottom uk-margin-medium-top">
@@ -75,7 +77,7 @@
               <p class="uk-text-bold" style="color:#000">Ações escolhidas</p>
 
               <ul class="uk-list uk-list-striped">
-                <li  *ngFor="let categoria of ['Motivar','Crescer','Inovar']">
+                <li *ngFor="let categoria of ['Motivar','Crescer','Inovar']">
                   <strong>{{ categoria }}:</strong>
                   <ul>
                     <li *ngFor="let acao of getAcoesByCategoria(categoria)" [ngClass]="{
@@ -83,10 +85,11 @@
               'categoria-crescer': categoria==='Crescer',
               'categoria-inovar': categoria==='Inovar'
             }">
-                 <span style="color:#000; font-size: 1.5rem; font-weight: 700; margin-left:10px "> {{ acao.acao }} </span>
+                      <span style="color:#000; font-size: 1.5rem; font-weight: 700; margin-left:10px "> {{ acao.acao }}
+                      </span>
                     </li>
                     <li *ngIf="getAcoesByCategoria(categoria).length === 0">
-                     <span style="color:#000"> Nenhuma ação selecionada </span>
+                      <span style="color:#000"> Nenhuma ação selecionada </span>
                     </li>
                   </ul>
                 </li>
@@ -133,7 +136,7 @@
                 </h4>
                 <hr>
                 <div *ngFor="let acao of item.acoes">
-                  <p class="uk-margin" >
+                  <p class="uk-margin">
                     <strong>Categoria:</strong> {{ acao.categoria }}<br>
                     <strong>Ação:</strong> {{ acao.acao }}
                   </p>

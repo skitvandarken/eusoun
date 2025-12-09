@@ -11,6 +11,7 @@ import { FotosSemanadaeticaComponent } from './layout/fotos-semanadaetica/fotos-
 import { Mesa1Component } from './paginas/mesa-1/mesa-1.component';
 import { ContribuicaoComponent } from './paginas/contribuicao/contribuicao.component';
 import { TablesComponent } from './paginas/tables/tables.component';
+import { ContribuitionsComponent } from './paginas/contribuitions/contribuitions.component';
 
 export const routes: Routes = [
   { path: '', component: InicioComponent },
@@ -24,5 +25,6 @@ export const routes: Routes = [
   { path: 'semana-da-etica', component: FotosSemanadaeticaComponent },
   { path: 'mesas', component: Mesa1Component },
   { path: 'contribuicoes', component: ContribuicaoComponent },
-  { path: 'tables', component: TablesComponent}
+  { path: 'tables', component: TablesComponent},
+  { path: 'contributions', component: ContribuitionsComponent }
 ];
