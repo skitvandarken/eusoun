@@ -8,10 +8,6 @@ import { UbuntuComponent } from './paginas/ubuntu/ubuntu.component';
 import { TesteComponent } from './paginas/teste/teste.component';
 import { MulherComponent } from './paginas/mulher/mulher.component';
 import { FotosSemanadaeticaComponent } from './layout/fotos-semanadaetica/fotos-semanadaetica.component';
-import { Mesa1Component } from './paginas/mesa-1/mesa-1.component';
-import { ContribuicaoComponent } from './paginas/contribuicao/contribuicao.component';
-import { TablesComponent } from './paginas/tables/tables.component';
-import { ContribuitionsComponent } from './paginas/contribuitions/contribuitions.component';
 
 export const routes: Routes = [
   { path: '', component: InicioComponent },
@@ -23,5 +19,9 @@ export const routes: Routes = [
   { path: 'teste', component: TesteComponent },
   { path: 'mulher', component: MulherComponent },
   { path: 'semana-da-etica', component: FotosSemanadaeticaComponent },
-
+  {
+    path: '**',
+    redirectTo: '',
+    pathMatch: 'full',
+  },
 ];
