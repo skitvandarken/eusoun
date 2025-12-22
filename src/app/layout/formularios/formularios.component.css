@@ -82,3 +82,58 @@
     text-align: center;
     padding: 20px;
   }
+
+
+  /* ===== FORM RESPONSIVO ===== */
+form {
+    width: 100%;
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.uk-input,
+.uk-textarea,
+.uk-select {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* Remove larguras fixas do UIkit */
+.uk-form-width-large {
+    max-width: 100% !important;
+}
+
+/* Mobile UX fix (evita zoom no iOS/Chrome) */
+@media (max-width: 640px) {
+    .uk-input,
+    .uk-textarea {
+        font-size: 16px;
+    }
+}
+
+/* Imagens e vídeo responsivos */
+img,
+video {
+    max-width: 100%;
+    height: auto !important;
+}
+
+/* Autocomplete ajustado */
+.autocomplete-list {
+    width: 100%;
+    position: absolute;
+    z-index: 10;
+}
+
+
+.uk-form-controls {
+    position: relative; /* Para que o dropdown seja relativo a este container */
+}
+
+.autocomplete-list {
+    width: 100%;       /* já está */
+    min-width: 0;      /* evita overflow */
+    box-sizing: border-box; 
+}

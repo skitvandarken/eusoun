@@ -27,224 +27,159 @@ emailjs.send("service_dr89jgu","template_94fzfla",{
 -->
 
 <ul class="uk-subnav uk-subnav-pill uk-flex-center" uk-switcher="animation: uk-animation-scale-up">
-    <li><a href="#">Imagem</a></li>
-    <li><a href="#">Video</a></li>
+  <li><a href="#">Imagem</a></li>
+  <li><a href="#">Video</a></li>
 </ul>
 
 <div class="uk-switcher uk-margin">
-    <div>
-        <div class="uk-flex uk-flex-center uk-text-center ">
+  <div>
+    <div class="uk-flex uk-flex-center uk-text-center ">
 
-            <div class="uk-flex uk-flex-center uk-text-center">
-        
-                <form  
-          style="margin-left: 10%; margin-right: 10%; padding-bottom: 5%;"
-          id="contact-form"
-          class=" uk-form-width-large uk-flex-center	"
-          (submit)="sendEmail($event, 'template_94fzfla')"
-        >
+      <div class="uk-flex uk-flex-center uk-text-center">
+
+        <form style="margin-left: 10%; margin-right: 10%; padding-bottom: 5%;" id="contact-form"
+          class=" uk-form-width-large uk-flex-center	" (submit)="sendEmail($event, 'template_94fzfla')">
           <div class="uk-margin ">
             <label class="uk-form-label" for="from_name">
               <h4 class="texto">Seu Nome</h4>
             </label>
             <div class="uk-form-controls">
-              <input
-                class="uk-text-center uk-input uk-border-pill"
-                name="from_name"
-                id="from_name"
-                type="text"
-                [(ngModel)]="formData.name"
-                placeholder="Digite seu nome"
-              />
+              <input class="uk-text-center uk-input uk-border-pill" name="from_name" id="from_name" type="text"
+                [(ngModel)]="formData.name" placeholder="Digite seu nome" />
             </div>
           </div>
-        
+
           <div *ngIf="loading" class="loading-spinner">
             <img src="/public/img/enviar.gif" class="loading-gif">
-        
+
             <p>Enviando postal...</p>
           </div>
-        
-        
+
+
           <div class="uk-margin">
             <label class="uk-form-label" for="email-field">
               <h4 class="texto">Para quem você deseja enviar?</h4>
             </label>
             <div class="uk-form-controls">
-                <input
-                class="uk-input uk-input uk-border-pill  uk-form-height-large uk-text-center"
-                id="to_email"
-                type="text"
-                [(ngModel)]="selectedEmail"
-                (input)="onInputChange($event)"
-                placeholder="Digite ou selecione um email"
-                name="to_email"
-              />
+              <input class="uk-input uk-input uk-border-pill  uk-form-height-large uk-text-center" id="to_email"
+                type="text" [(ngModel)]="selectedEmail" (input)="onInputChange($event)"
+                placeholder="Digite ou selecione um email" name="to_email" />
               <ul *ngIf="filteredEmails.length > 0" class="autocomplete-list">
-                <li class=""
-                  *ngFor="let email of filteredEmails"
-                  (click)="selectEmail(email)"
-                  class="autocomplete-item"
-                  tabindex="0"
-                >
+                <li class="" *ngFor="let email of filteredEmails" (click)="selectEmail(email)" class="autocomplete-item"
+                  tabindex="0">
                   {{ email }}
                 </li>
               </ul>
             </div>
           </div>
-        
+
           <div class="uk-margin">
             <label class="uk-form-label" for="mensagem">
               <h4 class="texto">Sua Mensagem</h4>
             </label>
             <div class="uk-form-controls">
-              <textarea
-                class="uk-textarea uk-border-rounded uk-form-width-large"
-                name="message"
-                id="mensagem"
-                type="text"
-                rows="5"
-                [(ngModel)]="formData.message"
-                placeholder="Escreva sua mensagem"
-              ></textarea>
+              <textarea class="uk-textarea uk-border-rounded uk-form-width-large" name="message" id="mensagem"
+                type="text" rows="5" [(ngModel)]="formData.message" placeholder="Escreva sua mensagem"></textarea>
             </div>
           </div>
-        
+
           <!-- Loading Spinner -->
-           <p class="texto"> O seu colega receberá esta imagem</p>
+          <p class="texto"> O seu colega receberá esta imagem</p>
           <img class="uk-border-rounded" style="height: 200px;" st src="img/postal-natal-site-o.jpg">
 
-        
+
           <div class="uk-margin">
-            <button
-              class="botao-participar uk-button uk-button-primary uk-border-rounded uk-button-large"
-              type="submit"
-            >
+            <button class="botao-participar uk-button uk-button-primary uk-border-rounded uk-button-large"
+              type="submit">
               Enviar
             </button>
           </div>
         </form>
-        
-            </div>
-        
-        </div>
-        
-        
+
+      </div>
+
     </div>
 
 
+  </div>
+
+
+
+  <div>
+
 
     <div>
-        
+      <div class="uk-flex uk-flex-center uk-text-center ">
 
-        <div>
-            <div class="uk-flex uk-flex-center uk-text-center ">
-    
-                <div class="uk-flex uk-flex-center uk-text-center">
-            
-                    <form
-              style="margin-left: 10%; margin-right: 10%; padding-bottom: 5%;"
-              id="contact-form"
-              class=" uk-form-width-large uk-flex-center	"
-              (submit)="sendEmail($event, 'template_e3vn5k8')"
-            >
-              <div class="uk-margin ">
-                <label class="uk-form-label" for="from_name">
-                  <h4 class="texto">Seu Nome</h4>
-                </label>
-                <div class="uk-form-controls">
-                  <input
-                    class="uk-text-center uk-input uk-border-pill"
-                    name="from_name"
-                    id="from_name"
-                    type="text"
-                    [(ngModel)]="formData.name"
-                    placeholder="Digite seu nome"
-                  />
-                </div>
+        <div class="uk-flex uk-flex-center uk-text-center">
+
+          <form style="margin-left: 10%; margin-right: 10%; padding-bottom: 5%;" id="contact-form"
+            class=" uk-form-width-large uk-flex-center	" (submit)="sendEmail($event, 'template_e3vn5k8')">
+            <div class="uk-margin ">
+              <label class="uk-form-label" for="from_name">
+                <h4 class="texto">Seu Nome</h4>
+              </label>
+              <div class="uk-form-controls">
+                <input class="uk-text-center uk-input uk-border-pill" name="from_name" id="from_name" type="text"
+                  [(ngModel)]="formData.name" placeholder="Digite seu nome" />
               </div>
-            
-              <div *ngIf="loading" class="loading-spinner">
-                <img src="/public/img/enviar.gif" class="loading-gif">
-            
-                <p>Enviando postal...</p>
-              </div>
-            
-            
-              <div class="uk-margin">
-                <label class="uk-form-label" for="email-field">
-                  <h4 class="texto">Para quem você deseja enviar?</h4>
-                </label>
-                <div class="uk-form-controls">
-                    <input
-                    class="uk-input uk-input uk-border-pill  uk-form-height-large uk-text-center"
-                    id="to_email"
-                    type="text"
-                    [(ngModel)]="selectedEmail"
-                    (input)="onInputChange($event)"
-                    placeholder="Digite ou selecione um email"
-                    name="to_email"
-                  />
-                  <ul *ngIf="filteredEmails.length > 0" class="autocomplete-list">
-                    <li class=""
-                      *ngFor="let email of filteredEmails"
-                      (click)="selectEmail(email)"
-                      class="autocomplete-item"
-                      tabindex="0"
-                    >
-                      {{ email }}
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            
-              <div class="uk-margin">
-                <label class="uk-form-label" for="mensagem">
-                  <h4 class="texto">Sua Mensagem</h4>
-                </label>
-                <div class="uk-form-controls">
-                  <textarea
-                    class="uk-textarea uk-border-rounded uk-form-width-large"
-                    name="message"
-                    id="mensagem"
-                    type="text"
-                    rows="5"
-                    [(ngModel)]="formData.message"
-                    placeholder="Escreva sua mensagem"
-                  ></textarea>
-                </div>
-              </div>
-            
-              <!-- Loading Spinner -->
-              <p class="texto"> O seu colega receberá este vídeo</p>
-              <video  class="espaco "
-              style="  height: 400px;    width: auto;  "
-                autoplay
-                loop
-                id="backgroundVideo"
-                class="background-video"
-              >
-                <source src="https://eu-sou-nos.angolacables.co.ao/vid/postal.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
-            
-              <div class="uk-margin">
-                <button
-                  class="botao-participar uk-button uk-button-primary uk-border-rounded uk-button-large"
-                  type="submit"
-                >
-                  Enviar
-                </button>
-              </div>
-            </form>
-            
-                </div>
-            
             </div>
-            
-            
+
+            <div *ngIf="loading" class="loading-spinner">
+              <img src="/public/img/enviar.gif" class="loading-gif">
+
+              <p>Enviando postal...</p>
+            </div>
+
+
+            <div class="uk-margin">
+              <label class="uk-form-label" for="email-field">
+                <h4 class="texto">Para quem você deseja enviar?</h4>
+              </label>
+              <div class="uk-form-controls">
+                <input class="uk-input uk-input uk-border-pill  uk-form-height-large uk-text-center" id="to_email"
+                  type="text" [(ngModel)]="selectedEmail" (input)="onInputChange($event)"
+                  placeholder="Digite ou selecione um email" name="to_email" />
+                <ul *ngIf="filteredEmails.length > 0" class="autocomplete-list">
+                  <li class="" *ngFor="let email of filteredEmails" (click)="selectEmail(email)"
+                    class="autocomplete-item" tabindex="0">
+                    {{ email }}
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="uk-margin">
+              <label class="uk-form-label" for="mensagem">
+                <h4 class="texto">Sua Mensagem</h4>
+              </label>
+              <div class="uk-form-controls">
+                <textarea class="uk-textarea uk-border-rounded uk-form-width-large" name="message" id="mensagem"
+                  type="text" rows="5" [(ngModel)]="formData.message" placeholder="Escreva sua mensagem"></textarea>
+              </div>
+            </div>
+
+            <!-- Loading Spinner -->
+            <p class="texto"> O seu colega receberá este vídeo</p>
+            <video class="espaco " style="  height: 400px;    width: auto;  " autoplay loop id="backgroundVideo"
+              class="background-video">
+              <source src="https://eu-sou-nos.angolacables.co.ao/vid/postal.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+
+            <div class="uk-margin">
+              <button class="botao-participar uk-button uk-button-primary uk-border-rounded uk-button-large"
+                type="submit">
+                Enviar
+              </button>
+            </div>
+          </form>
+
         </div>
-        </div>
+
+      </div>
+
+
+    </div>
+  </div>
 </div>
-
-

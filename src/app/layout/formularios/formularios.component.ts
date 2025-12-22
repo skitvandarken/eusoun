@@ -1,15 +1,15 @@
 import { CommonModule, NgFor } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import emailjs, {type EmailJSResponseStatus} from '@emailjs/browser'
+import emailjs, { type EmailJSResponseStatus } from '@emailjs/browser';
 import { Subject, debounceTime } from 'rxjs';
 @Component({
   selector: 'app-formularios',
   imports: [FormsModule, CommonModule, NgFor],
   templateUrl: './formularios.component.html',
-  styleUrl: './formularios.component.css'
+  styleUrl: './formularios.component.css',
 })
-export class FormulariosComponent implements OnInit  {
+export class FormulariosComponent implements OnInit {
   emails = [
     'abednego.ferreira@angolacables.co.ao',
     'ada.bento@angolacables.co.ao',
@@ -144,83 +144,83 @@ export class FormulariosComponent implements OnInit  {
     'joao.bioco@angolacables.com',
     'tatiana.joao@angolacables.co.ao',
     'sudhir.juggernath@telcables.co.za',
-'mahendran.naidu@telcables.co.za',
-'jacqueline.kitching@telcables.co.za',
-'estella.quintal@telcables.co.za',
-'thabo.ntlatsang@telcables.co.za',
-'patience.tigere@telcables.co.za',
-'alisha.badassy@telcables.co.za',
-'fernando.fernandes@telcables.ng',
-'jonadab.brown@telcables.ng',
-'babatunde.adeoye@telcables.ng',
-'israel.ogboi@telcables.ng',
-'osibanjo.olalekan@telcables.ng',
-'celma.paulo@telcables.pt',
-'eric.owusu@telcables.net',
-'amanda.arruda@angolacables.co.ao',
-'ana.santos@telcables.com.br',
-'ana.sales@telcables.com.br',
-'anderson.nunes@angolacables.co.ao',
-'andre.castelo@angolacables.co.ao',
-'andrea.brito@telcables.com.br',
-'barbara.stoenescu@telcables.com.br',
-'benjamim.andrade@angolacables.co.ao',
-'bruna.lassakoski@angolacables.co.ao',
-'bruno.burgoa@angolacables.co.ao',
-'carlos.ponciano@telcables.com.br',
-'cicera.cesario@telcables.com.br',
-'claudio.florindo@telcables.com.br',
-'frederico.oliveira@angolacables.co.ao',
-'daniele.maranhao@telcables.com.br',
-'daynara.lacerda@angolacables.co.ao',
-'diego.aquino@telcables.com.br',
-'diego.ribeiro@angolacables.co.ao',
-'emanuel.silva@angolacables.co.ao',
-'eva.rolim@telcables.com.br',
-'felipe.yasuda@angolacables.co.ao',
-'fernanda.freitas@telcables.com.br',
-'gabriel.oliveira@angolacables.co.ao',
-'gefran.bezerra@angolacables.co.ao',
-'guilherme.vieira@telcables.com.br',
-'guilherme.vidal@angolacables.co.ao',
-'hemil.ribeiro@angolacables.co.ao',
-'igor.melo@telcables.com.br',
-'igor.barrozo@angolacables.co.ao',
-'Joao.silva@telcables.com.br',
-'joao.marcos@angolacables.co.ao',
-'jonatas.cartaxo@angolacables.co.ao',
-'kamilla.lemos@telcables.com.br',
-'karoline.trevizani@angolacables.co.ao',
-'leandro.souza@angolacables.co.ao',
-'livia.diola@telcables.com.br',
-'luana.raizer@telcables.com.br',
-'lucas.paulino@angolacables.co.ao',
-'lucenildo.junior@angolacables.co.ao',
-'mauricio.costa@telcables.com.br',
-'marciel.silva@angolacables.co.ao',
-'marcos.conceicao@angolacables.co.ao',
-'zuila.moreira@telcables.com.br',
-'nazaro.brito@telcables.com.br',
-'rafael.siqueira@telcables.com.br',
-'rafael.regis@angolacables.co.ao',
-'rafael.timbo@angolacables.co.ao',
-'rafael.akiyama@angolacables.co.ao',
-'rafaela.carvalho@telcables.com.br',
-'rayana.gadelha@angolacables.co.ao',
-'rodrigo.carvalho@angolacables.co.ao',
-'rodrigo.barbosa@telcables.com.br',
-'taina.aguiar@telcables.com.br',
-'thamires.santos@telcables.com.br',
-'thiago.ribeiro@angolacables.co.ao',
-'vitoria.varriale@telcables.com.br',
-'wilson.matos@angolacables.co.ao',
-'yuri.lima@angolacables.co.ao',
-'yuri.jorge@angolacables.co.ao'
+    'mahendran.naidu@telcables.co.za',
+    'jacqueline.kitching@telcables.co.za',
+    'estella.quintal@telcables.co.za',
+    'thabo.ntlatsang@telcables.co.za',
+    'patience.tigere@telcables.co.za',
+    'alisha.badassy@telcables.co.za',
+    'fernando.fernandes@telcables.ng',
+    'jonadab.brown@telcables.ng',
+    'babatunde.adeoye@telcables.ng',
+    'israel.ogboi@telcables.ng',
+    'osibanjo.olalekan@telcables.ng',
+    'celma.paulo@telcables.pt',
+    'eric.owusu@telcables.net',
+    'amanda.arruda@angolacables.co.ao',
+    'ana.santos@telcables.com.br',
+    'ana.sales@telcables.com.br',
+    'anderson.nunes@angolacables.co.ao',
+    'andre.castelo@angolacables.co.ao',
+    'andrea.brito@telcables.com.br',
+    'barbara.stoenescu@telcables.com.br',
+    'benjamim.andrade@angolacables.co.ao',
+    'bruna.lassakoski@angolacables.co.ao',
+    'bruno.burgoa@angolacables.co.ao',
+    'carlos.ponciano@telcables.com.br',
+    'cicera.cesario@telcables.com.br',
+    'claudio.florindo@telcables.com.br',
+    'frederico.oliveira@angolacables.co.ao',
+    'daniele.maranhao@telcables.com.br',
+    'daynara.lacerda@angolacables.co.ao',
+    'diego.aquino@telcables.com.br',
+    'diego.ribeiro@angolacables.co.ao',
+    'emanuel.silva@angolacables.co.ao',
+    'eva.rolim@telcables.com.br',
+    'felipe.yasuda@angolacables.co.ao',
+    'fernanda.freitas@telcables.com.br',
+    'gabriel.oliveira@angolacables.co.ao',
+    'gefran.bezerra@angolacables.co.ao',
+    'guilherme.vieira@telcables.com.br',
+    'guilherme.vidal@angolacables.co.ao',
+    'hemil.ribeiro@angolacables.co.ao',
+    'igor.melo@telcables.com.br',
+    'igor.barrozo@angolacables.co.ao',
+    'Joao.silva@telcables.com.br',
+    'joao.marcos@angolacables.co.ao',
+    'jonatas.cartaxo@angolacables.co.ao',
+    'kamilla.lemos@telcables.com.br',
+    'karoline.trevizani@angolacables.co.ao',
+    'leandro.souza@angolacables.co.ao',
+    'livia.diola@telcables.com.br',
+    'luana.raizer@telcables.com.br',
+    'lucas.paulino@angolacables.co.ao',
+    'lucenildo.junior@angolacables.co.ao',
+    'mauricio.costa@telcables.com.br',
+    'marciel.silva@angolacables.co.ao',
+    'marcos.conceicao@angolacables.co.ao',
+    'zuila.moreira@telcables.com.br',
+    'nazaro.brito@telcables.com.br',
+    'rafael.siqueira@telcables.com.br',
+    'rafael.regis@angolacables.co.ao',
+    'rafael.timbo@angolacables.co.ao',
+    'rafael.akiyama@angolacables.co.ao',
+    'rafaela.carvalho@telcables.com.br',
+    'rayana.gadelha@angolacables.co.ao',
+    'rodrigo.carvalho@angolacables.co.ao',
+    'rodrigo.barbosa@telcables.com.br',
+    'taina.aguiar@telcables.com.br',
+    'thamires.santos@telcables.com.br',
+    'thiago.ribeiro@angolacables.co.ao',
+    'vitoria.varriale@telcables.com.br',
+    'wilson.matos@angolacables.co.ao',
+    'yuri.lima@angolacables.co.ao',
+    'yuri.jorge@angolacables.co.ao',
   ];
 
   minLength: number = 1;
 
-    filteredEmails: string[] = []; // Filtered list for autocomplete
+  filteredEmails: string[] = []; // Filtered list for autocomplete
   selectedEmail: string = ''; // The selected or typed email
   loading: boolean = false; // Flag to control the loading state
 
@@ -239,11 +239,10 @@ export class FormulariosComponent implements OnInit  {
   ngOnInit() {
     this.filteredEmails = []; // Initialize with all emails
     this.inputChangeSubject
-    .pipe(debounceTime(300)) // Add a debounce of 300ms
+      .pipe(debounceTime(300)) // Add a debounce of 300ms
       .subscribe((value: string) => {
         this.filterEmails(value);
       });
-
   }
 
   onInputChange(event: Event) {
@@ -265,7 +264,6 @@ export class FormulariosComponent implements OnInit  {
       this.filteredEmails = [];
     }
   }
-
 
   selectEmail(email: string) {
     // Set the selected email and clear the filtered list
@@ -292,16 +290,19 @@ export class FormulariosComponent implements OnInit  {
             prefilled: '',
           };
 
-          window.alert('Mensagem enviada com sucesso! 🎉. Obrigado por partilhar felicidade nesta quadra festiva.');
+          window.alert(
+            'Mensagem enviada com sucesso! 🎉. Obrigado por partilhar felicidade nesta quadra festiva.'
+          );
           window.location.href = 'https://eu-sou-nos.angolacables.co.ao';
         },
         (error) => {
           console.log('FALHOU...', (error as EmailJSResponseStatus).text);
-          window.alert('😞 Awn... Não foi possível enviar o seu postal, verifique o e-mail introduzido e tente novamente. ');
+          window.alert(
+            '😞 Awn... Não foi possível enviar o seu postal, verifique o e-mail introduzido e tente novamente. '
+          );
         }
       );
   }
-
 
   onSubmit(e: Event) {
     e.preventDefault(); // Prevent default form submission
@@ -314,6 +315,4 @@ export class FormulariosComponent implements OnInit  {
       // Handle successful form submission here (e.g., display a success message)
     }, 2500); // Simulate a 2-second delay for the submission
   }
-
 }
-

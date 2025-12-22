@@ -34,3 +34,36 @@
 .espacos{
     padding: 10px;
 }
+
+
+.fundo-postal{
+        background: linear-gradient( 115deg, #0089c0, #648c00);/* Background color for the navbar */
+
+}
+
+
+/* Inputs, selects e textareas responsivos */
+.uk-input,
+.uk-select,
+.uk-textarea {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* Remove larguras fixas herdadas */
+input,
+select,
+textarea {
+    max-width: 100%;
+}
+
+/* Melhor toque em mobile */
+@media (max-width: 640px) {
+    .uk-input,
+    .uk-select,
+    .uk-textarea {
+        font-size: 16px; /* evita zoom automático no mobile */
+        padding: 12px;
+    }
+}

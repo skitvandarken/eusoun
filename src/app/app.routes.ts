@@ -8,6 +8,7 @@ import { UbuntuComponent } from './paginas/ubuntu/ubuntu.component';
 import { TesteComponent } from './paginas/teste/teste.component';
 import { MulherComponent } from './paginas/mulher/mulher.component';
 import { FotosSemanadaeticaComponent } from './layout/fotos-semanadaetica/fotos-semanadaetica.component';
+import { PostaisComponent } from './paginas/postais/postais.component';
 
 export const routes: Routes = [
   { path: '', component: InicioComponent },
@@ -19,6 +20,7 @@ export const routes: Routes = [
   { path: 'teste', component: TesteComponent },
   { path: 'mulher', component: MulherComponent },
   { path: 'semana-da-etica', component: FotosSemanadaeticaComponent },
+  { path: 'postais', component: PostaisComponent },
   {
     path: '**',
     redirectTo: '',
